@@ -18,30 +18,40 @@ using namespace i18n::literals;
 AmsTab::AmsTab(const nlohmann::json& nxlinks, const bool erista, const bool hideStandardEntries) : brls::List()
 {
     this->erista = erista;
+
+    std::filesystem::remove(CFW_ZIP_PATH);
+    std::filesystem::remove(FW_ZIP_PATH);
+
     this->hekate = util::getValueFromKey(nxlinks, "hekate");
     auto cfws = util::getValueFromKey(nxlinks, "cfws");
 
     if (!hideStandardEntries) {
-        this->description = new brls::Label(brls::LabelStyle::DESCRIPTION, "menus/main/ams_text"_i18n + (CurrentCfw::running_cfw == CFW::ams ? "\n" + "menus/ams_update/current_ams"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true);
+        brls::Label* kefText = new brls::Label(
+        brls::LabelStyle::DESCRIPTION,
+            fmt::format("menus/main/ams_text"_i18n), true);
+        kefText->setHorizontalAlign(NVG_ALIGN_LEFT);
+        this->addView(kefText);
+
+        this->description = new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_kefir"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true);
         this->addView(description);
         CreateDownloadItems(util::getValueFromKey(cfws, "Atmosphere"));
 
-        description = new brls::Label(
-            brls::LabelStyle::DESCRIPTION,
-            "menus/ams_update/deepsea_label"_i18n,
-            true);
-        this->addView(description);
+        // description = new brls::Label(
+        //     brls::LabelStyle::DESCRIPTION,
+        //     "menus/ams_update/deepsea_label"_i18n,
+        //     true);
+        // this->addView(description);
 
-        listItem = new brls::ListItem("menus/ams_update/get_custom_deepsea"_i18n);
-        listItem->setHeight(LISTITEM_HEIGHT);
-        listItem->getClickEvent()->subscribe([this](brls::View* view) {
-            nlohmann::ordered_json modules;
-            download::getRequest(DEEPSEA_META_JSON, modules);
-            this->ShowCustomDeepseaBuilder(modules);
-        });
-        this->addView(listItem);
+        // listItem = new brls::ListItem("menus/ams_update/get_custom_deepsea"_i18n);
+        // listItem->setHeight(LISTITEM_HEIGHT);
+        // listItem->getClickEvent()->subscribe([this](brls::View* view) {
+        //     nlohmann::ordered_json modules;
+        //     download::getRequest(DEEPSEA_META_JSON, modules);
+        //     this->ShowCustomDeepseaBuilder(modules);
+        // });
+        // this->addView(listItem);
 
-        CreateDownloadItems(util::getValueFromKey(cfws, "DeepSea"), false);
+        // CreateDownloadItems(util::getValueFromKey(cfws, "DeepSea"), false);
     }
 
     auto custom_pack = fs::parseJsonFile(CUSTOM_PACKS_PATH);
@@ -52,7 +62,7 @@ AmsTab::AmsTab(const nlohmann::json& nxlinks, const bool erista, const bool hide
             true);
         this->addView(description);
 
-        CreateDownloadItems(cfws.size() ? custom_pack : nlohmann::ordered_json::object(), true);  // TODO: better way to check for availability of the links
+        CreateDownloadItems(cfws.size() ? custom_pack : nlohmann::ordered_json::object(), false);  // TODO: better way to check for availability of the links
     }
 }
 
@@ -63,20 +73,20 @@ void AmsTab::CreateDownloadItems(const nlohmann::ordered_json& cfw_links, bool h
     links = download::getLinksFromJson(cfw_links);
     if (links.size()) {
         auto hekate_link = download::getLinksFromJson(this->hekate);
-        std::string hekate_url = hekate_link[0].second;
-        std::string text_hekate = "menus/common/download"_i18n + hekate_link[0].first;
+        // std::string hekate_url = hekate_link[0].second;
+        // std::string text_hekate = "menus/common/download"_i18n + hekate_link[0].first;
 
         for (const auto& link : links) {
             std::string url = link.second;
             std::string text("menus/common/download"_i18n + link.first + "menus/common/from"_i18n + url);
             listItem = new brls::ListItem(link.first);
             listItem->setHeight(LISTITEM_HEIGHT);
-            listItem->getClickEvent()->subscribe([this, text, text_hekate, url, hekate_url, operation, hekate](brls::View* view) {
-                if (!erista && !std::filesystem::exists(MARIKO_PAYLOAD_PATH)) {
+            listItem->getClickEvent()->subscribe([this, text, url, operation, hekate](brls::View* view) {
+                if (!erista && !std::filesystem::exists(RCM_PAYLOAD_PATH)) {
                     brls::Application::crash("menus/errors/mariko_payload_missing"_i18n);
                 }
                 else {
-                    CreateStagedFrames(text, url, operation, erista, hekate, text_hekate, hekate_url);
+                    CreateStagedFrames(text, url, operation, erista);
                 }
             });
             this->addView(listItem);

@@ -106,15 +106,10 @@ void DialoguePage_ams::instantiateButtons()
             util::rebootToPayload(RCM_PAYLOAD_PATH);
         }
         else {
-            if (std::filesystem::exists(UPDATE_BIN_PATH)) {
-                fs::copyFile(UPDATE_BIN_PATH, MARIKO_PAYLOAD_PATH_TEMP);
+            bpcInitialize();
+            bpcRebootSystem();
+            bpcExit();
             }
-            else {
-                fs::copyFile(REBOOT_PAYLOAD_PATH, MARIKO_PAYLOAD_PATH_TEMP);
-            }
-            fs::copyFile(RCM_PAYLOAD_PATH, MARIKO_PAYLOAD_PATH);
-            util::shutDown(true);
-        }
         brls::Application::popView();
     });
 
@@ -132,6 +127,7 @@ void DialoguePage_fw::instantiateButtons()
     });
 
     this->button1->getClickEvent()->subscribe([this](View* view) {
+        fs::removeTheme();
         envSetNextLoad(DAYBREAK_PATH, fmt::format("\"{}\" \"/firmware\"", DAYBREAK_PATH).c_str());
         romfsExit();
         brls::Application::quit();

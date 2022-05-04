@@ -73,10 +73,10 @@ namespace extract {
                     unzipper.extractEntry(entry.name);
                 }
             }
-            else if (entry.name == "atmosphere/stratosphere.romfs" || entry.name == "atmosphere/package3") {
-                std::ofstream readonlyFile(entry.name + ".aio");
-                unzipper.extractEntryToStream(entry.name, readonlyFile);
-            }
+            // else if (entry.name == "atmosphere/stratosphere.romfs" || entry.name == "atmosphere/package3") {
+            //     std::ofstream readonlyFile(entry.name + ".aio");
+            //     unzipper.extractEntryToStream(entry.name, readonlyFile);
+            // }
             else {
                 unzipper.extractEntry(entry.name);
                 if (entry.name.substr(0, 13) == "hekate_ctcaer") {

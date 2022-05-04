@@ -121,9 +121,23 @@ namespace fs {
         return titles;
     }
 
+    std::string readLine(const char * path){
+        std::string str;
+        std::ifstream in(path);
+        if(in){
+            std::getline(in, str);
+        } else {str = "not a kefir";}
+        return str;
+    }
+
     Result getFreeStorageSD(s64& free)
     {
         return nsGetFreeSpaceSize(NcmStorageId_SdCard, &free);
     }
 
+    void removeTheme() {
+            if (std::filesystem::exists("/atmosphere/contents/0100000000001000")) fs::removeDir("/atmosphere/contents/0100000000001000");
+            if (std::filesystem::exists("/atmosphere/contents/0100000000001007")) fs::removeDir("/atmosphere/contents/0100000000001007");
+            if (std::filesystem::exists("/atmosphere/contents/0100000000001013")) fs::removeDir("/atmosphere/contents/0100000000001013");
+    }
 }  // namespace fs

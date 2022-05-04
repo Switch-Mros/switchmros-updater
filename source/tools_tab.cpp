@@ -26,25 +26,25 @@ namespace {
 
 ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payloads, bool erista, const nlohmann::json& hideStatus) : brls::List()
 {
-    if (!tag.empty() && tag != AppVersion) {
-        updateApp = new brls::ListItem(fmt::format("menus/tools/update_app"_i18n, tag));
-        std::string text("menus/tools/dl_app"_i18n + std::string(APP_URL));
-        updateApp->getClickEvent()->subscribe([text, tag](brls::View* view) {
-            brls::StagedAppletFrame* stagedFrame = new brls::StagedAppletFrame();
-            stagedFrame->setTitle("menus/common/updating"_i18n);
-            stagedFrame->addStage(
-                new ConfirmPage(stagedFrame, text));
-            stagedFrame->addStage(
-                new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, []() { util::downloadArchive(APP_URL, contentType::app); }));
-            stagedFrame->addStage(
-                new WorkerPage(stagedFrame, "menus/common/extracting"_i18n, []() { util::extractArchive(contentType::app); }));
-            stagedFrame->addStage(
-                new ConfirmPage(stagedFrame, "menus/common/all_done"_i18n, true));
-            brls::Application::pushView(stagedFrame);
-        });
-        updateApp->setHeight(LISTITEM_HEIGHT);
-        this->addView(updateApp);
-    }
+    // if (!tag.empty() && tag != AppVersion) {
+    //     updateApp = new brls::ListItem(fmt::format("menus/tools/update_app"_i18n, tag));
+    //     std::string text("menus/tools/dl_app"_i18n + std::string(APP_URL));
+    //     updateApp->getClickEvent()->subscribe([text, tag](brls::View* view) {
+    //         brls::StagedAppletFrame* stagedFrame = new brls::StagedAppletFrame();
+    //         stagedFrame->setTitle("menus/common/updating"_i18n);
+    //         stagedFrame->addStage(
+    //             new ConfirmPage(stagedFrame, text));
+    //         stagedFrame->addStage(
+    //             new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, []() { util::downloadArchive(APP_URL, contentType::app); }));
+    //         stagedFrame->addStage(
+    //             new WorkerPage(stagedFrame, "menus/common/extracting"_i18n, []() { util::extractArchive(contentType::app); }));
+    //         stagedFrame->addStage(
+    //             new ConfirmPage(stagedFrame, "menus/common/all_done"_i18n, true));
+    //         brls::Application::pushView(stagedFrame);
+    //     });
+    //     updateApp->setHeight(LISTITEM_HEIGHT);
+    //     this->addView(updateApp);
+    // }
 
     cheats = new brls::ListItem("menus/tools/cheats"_i18n);
     cheats->getClickEvent()->subscribe([](brls::View* view) {
@@ -87,17 +87,17 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
                 WebCommonReply out;
                 Result rc = webPageCreate(&conf, url.c_str());
                 if (R_FAILED(rc))
-                    error += "\uE016 Error starting Browser\n\uE016 Lookup error code for more info " + rc;
+                    error += "\uE016 Не могу запустить браузер.\n\uE016 Код ошибки: " + rc;
                 webConfigSetJsExtension(&conf, true);
                 webConfigSetPageCache(&conf, true);
                 webConfigSetBootLoadingIcon(&conf, true);
                 webConfigSetWhitelist(&conf, ".*");
                 rc = webConfigShow(&conf, &out);
                 if (R_FAILED(rc))
-                    error += "\uE016 Error starting Browser\n\uE016 Lookup error code for more info " + rc;
+                     error += "\uE016 Не могу запустить браузер.\n\uE016 Код ошибки: " + rc;
             }
             else {  // Running under applet
-                error += "\uE016 Running in applet mode/through a forwarder.\n\uE016 Please launch hbmenu by holding [R] on a game";
+                error += "Эта функция не доступна в режиме апплета (через альбомы).\nПожалуйста перезапустите программу в режиме тайтла (через форвардер или игру), чтобы воспользоваться ей.";
             }
             if (!error.empty()) {
                 util::showDialogBoxInfo(error);
@@ -208,6 +208,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     if (!util::getBoolValue(hideStatus, "move")) this->addView(move);
     if (!util::getBoolValue(hideStatus, "cleanup")) this->addView(cleanUp);
     if (!util::getBoolValue(hideStatus, "language")) this->addView(language);
-    this->addView(hideTabs);
-    this->addView(changelog);
+
+    // this->addView(hideTabs);
+    // this->addView(changelog);
 }

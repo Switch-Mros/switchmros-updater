@@ -7,7 +7,7 @@ AboutTab::AboutTab()
 {
     // Subtitle
     brls::Label* subTitle = new brls::Label(
-        brls::LabelStyle::REGULAR,
+        brls::LabelStyle::DIALOG,
         "menus/about/title"_i18n,
         true);
     subTitle->setHorizontalAlign(NVG_ALIGN_CENTER);
@@ -16,13 +16,13 @@ AboutTab::AboutTab()
     // Copyright
     brls::Label* copyright = new brls::Label(
         brls::LabelStyle::DESCRIPTION,
-        "menus/about/copyright"_i18n + "\n© 2020-2022 HamletDuFromage",
+        "menus/about/copyright"_i18n + "\n© 2020-2022 HamletDuFromage, forked by xHR",
         true);
     copyright->setHorizontalAlign(NVG_ALIGN_CENTER);
     this->addView(copyright);
 
     // Links
-    this->addView(new brls::Header("Disclaimers"));
+    this->addView(new brls::Header("Важная информация"));
     brls::Label* links = new brls::Label(
         brls::LabelStyle::SMALL,
         "menus/about/disclaimers"_i18n + "\n" + "menus/about/donate"_i18n,

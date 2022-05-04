@@ -20,9 +20,9 @@ SOURCES		:=	source lib/zipper/source
 RESOURCES	:=	resources
 DATA		:=	data
 INCLUDES	:=	include lib/zipper/include /lib/borealis/library/include/borealis/extern/nlohmann
-APP_TITLE	:=	All-in-One Switch Updater
-APP_AUTHOR	:=	HamletDuFromage
-APP_VERSION :=  2.18.1
+APP_TITLE	:=	Kefir Updater
+APP_AUTHOR	:=	HamletDuFromage, forked by xHR
+APP_VERSION :=  2.18.1-ku
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -164,14 +164,14 @@ $(ROMFS):
 	@cp -ruf $(CURDIR)/$(ROMFS)/i18n/zh-CN/. $(CURDIR)/$(ROMFS)/i18n/zh-Hans/
 	@cp -ruf $(CURDIR)/$(ROMFS)/i18n/zh-TW/. $(CURDIR)/$(ROMFS)/i18n/zh-Hant/
 	@rm -rf $(CURDIR)/$(ROMFS)/i18n/*/installer.json $(CURDIR)/$(ROMFS)/i18n/*/main.json $(CURDIR)/$(ROMFS)/i18n/*/popup.json $(CURDIR)/$(ROMFS)/i18n/*/custom_layout.json
-	@$(MAKE) -C $(CURDIR)/aiosu-rcm -f $(CURDIR)/aiosu-rcm/Makefile
-	@cp $(CURDIR)/aiosu-rcm/output/aio_rcm.bin $(CURDIR)/$(ROMFS)/aio_rcm.bin
-# @$(MAKE) -C $(CURDIR)/aiosu-forwarder -f $(CURDIR)/aiosu-forwarder/Makefile
-	@cp $(CURDIR)/aiosu-forwarder/aiosu-forwarder.nro $(CURDIR)/$(ROMFS)/aiosu-forwarder.nro
 
 $(BUILD): $(ROMFS)
+	@$(MAKE) -C $(CURDIR)/../TegraExplorer -f $(CURDIR)/../TegraExplorer/Makefile
+	[ -d $(CURDIR)/output ] || mkdir -p $(CURDIR)/output
 	@[ -d $@ ] || mkdir -p $@
 	@MSYS2_ARG_CONV_EXCL="-D;$(MSYS2_ARG_CONV_EXCL)" $(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
+	@cp $(OUTPUT).nro $(CURDIR)/output/kefir-updater.nro
+	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro
 
 #---------------------------------------------------------------------------------
 clean:
@@ -183,6 +183,12 @@ else
 	@rm -fr $(BUILD) $(TARGET).nsp $(TARGET).nso $(TARGET).npdm $(TARGET).elf
 endif
 
+nxlink:
+	nxlink -a 192.168.0.116 -p /kefir-updater/kefir-updater.nro output/kefir-updater.nro
+
+copy:
+	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro
+	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.bin
 
 #---------------------------------------------------------------------------------
 else

@@ -170,6 +170,7 @@ namespace util {
                 if (std::filesystem::exists(FIRMWARE_PATH)) std::filesystem::remove_all(FIRMWARE_PATH);
                 fs::createTree(FIRMWARE_PATH);
                 extract::extract(FIRMWARE_FILENAME, FIRMWARE_PATH);
+                if (std::filesystem::exists(FIRMWARE_FILENAME)) std::filesystem::remove(FIRMWARE_FILENAME);
                 break;
             case contentType::app:
                 extract::extract(APP_FILENAME, CONFIG_PATH);
@@ -184,11 +185,16 @@ namespace util {
                 break;
             }
             case contentType::ams_cfw: {
-                int overwriteInis = showDialogBoxBlocking("menus/utils/overwrite_inis"_i18n, "menus/common/no"_i18n, "menus/common/yes"_i18n);
-                int deleteContents = showDialogBoxBlocking("menus/ams_update/delete_sysmodules_flags"_i18n, "menus/common/no"_i18n, "menus/common/yes"_i18n);
-                if (deleteContents == 1)
-                    removeSysmodulesFlags(AMS_CONTENTS);
-                extract::extract(AMS_FILENAME, ROOT_PATH, overwriteInis);
+                if (std::filesystem::exists(KEFIR_DIRECTORY_PATH)) std::filesystem::remove_all(KEFIR_DIRECTORY_PATH);
+                std::filesystem::create_directory(KEFIR_DIRECTORY_PATH);
+                extract::extract(CFW_FILENAME, KEFIR_DIRECTORY_PATH, 1);
+
+                if (std::filesystem::exists("/kefir/bootloader/hekate_ipl.ini")) {
+                    fs::copyFile("/kefir/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl.ini");
+                    fs::copyFile("/kefir/config/kefir-updater/kefir_updater.ini", "/bootloader/ini/!kefir_updater.ini");
+                    fs::copyFile("/kefir/bootloader/res/ku.bmp", "/bootloader/res/ku.bmp");
+                    if (std::filesystem::exists(CFW_FILENAME)) std::filesystem::remove_all(CFW_FILENAME);
+                }
                 break;
             }
             default:

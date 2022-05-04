@@ -89,12 +89,6 @@ void ListDownloadTab::createList(contentType type)
                 switch (type) {
                     case contentType::fw: {
                         std::string contentsPath = util::getContentsPath();
-                        for (const auto& tid : {"0100000000001000", "0100000000001007", "0100000000001013"}) {
-                            if (std::filesystem::exists(contentsPath + tid) && !std::filesystem::is_empty(contentsPath + tid)) {
-                                doneMsg += "\n" + "menus/main/theme_warning"_i18n;
-                                break;
-                            }
-                        }
                         if (std::filesystem::exists(DAYBREAK_PATH)) {
                             stagedFrame->addStage(new DialoguePage_fw(stagedFrame, doneMsg));
                         }
@@ -146,7 +140,21 @@ void ListDownloadTab::setDescription(contentType type)
             break;
         case contentType::fw: {
             SetSysFirmwareVersion ver;
-            description->setText(fmt::format("{}{}", "menus/main/firmware_text"_i18n, R_SUCCEEDED(setsysGetFirmwareVersion(&ver)) ? ver.display_version : "menus/main/not_found"_i18n));
+
+            brls::Label* fwText = new brls::Label(
+            brls::LabelStyle::DESCRIPTION,
+                fmt::format("menus/main/firmware_text"_i18n),
+                true);
+            fwText->setHorizontalAlign(NVG_ALIGN_LEFT);
+            this->addView(fwText);
+
+            brls::Label* fwVersion = new brls::Label(
+            brls::LabelStyle::MEDIUM,
+                fmt::format("{}{}", "menus/main/firmware_version"_i18n, R_SUCCEEDED(setsysGetFirmwareVersion(&ver)) ? ver.display_version : "menus/main/not_found"_i18n),
+                true);
+            fwVersion->setHorizontalAlign(NVG_ALIGN_LEFT);
+            this->addView(fwVersion);
+
             break;
         }
         case contentType::bootloaders:

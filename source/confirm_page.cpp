@@ -26,14 +26,9 @@ ConfirmPage::ConfirmPage(brls::StagedAppletFrame* frame, const std::string& text
                 util::rebootToPayload(RCM_PAYLOAD_PATH);
             }
             else {
-                if (std::filesystem::exists(UPDATE_BIN_PATH)) {
-                    fs::copyFile(UPDATE_BIN_PATH, MARIKO_PAYLOAD_PATH_TEMP);
-                }
-                else {
-                    fs::copyFile(REBOOT_PAYLOAD_PATH, MARIKO_PAYLOAD_PATH_TEMP);
-                }
-                fs::copyFile(RCM_PAYLOAD_PATH, MARIKO_PAYLOAD_PATH);
-                util::shutDown(true);
+                bpcInitialize();
+                bpcRebootSystem();
+                bpcExit();
             }
         }
     });
