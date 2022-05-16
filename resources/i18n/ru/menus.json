@@ -65,7 +65,8 @@
     "go_back": "Вернуться",
     "confirm": "Подтвердить",
     "cancel": "Отмена",
-    "applet_mode_not_supported": "Эта функция не доступна в режиме апплета (через альбомы). Пожалуйста перезапустите программу в режиме тайтла (через форвардер или игру), чтобы воспользоваться ей."
+    "applet_mode_not_supported": "Эта функция не доступна в режиме апплета (через альбомы). Пожалуйста перезапустите программу в режиме тайтла (через форвардер или игру), чтобы воспользоваться ей.",
+    "nothing_to_see": "Обновления не найдены!"
   },
   "changelog": {
     "changelog": "Изменения"
@@ -106,7 +107,7 @@
     "getting": "Загрузка ",
     "firmware_text": "\ue016  Дамп прошивки взят с 'https://darthsternie.net/switch-firmwares/'. После загрузки, прошивка будет распакована в папку '/firmware'. Распакованную прошивку можно установить с помощью Daybreak.",
     "firmware_version": "\ue016  Текущая версия прошивки: ",
-    "cheats_text": "\uE016  Загрузка обновлений читов с сайта 'gbatemp.net'. Читы для игр, которые у вас не установлены не будут распаковываться на карту памяти. Вы можете отключить обновления читов для определённых игр через меню 'Инструменты -> Управление читами'.\n\uE016  Для активации читов, удерживайте кнопку (L) во время запуска игры!\n\n\uE016  Текущая версия читов: ",
+    "cheats_text": "\uE016  Загрузка обновлений читов с сайта 'gbatemp.net'. Читы для игр, которые у вас не установлены не будут распаковываться на карту памяти. Вы можете отключить обновления читов для определённых игр через меню 'Инструменты → Управление читами'.\n\uE016  Для активации читов, удерживайте кнопку (L) во время запуска игры!\n\n\uE016  Текущая версия читов: ",
     "get_cheats": "Скачать читы с GBAtemp.net (ver {})",
     "sigpatches": "sigpatches",
     "sigpatches_text": "\ue016  Sigpatches allow your Switch to install and run unofficial NSP file. Make sure you pick the correct sigpatches for your setup (pure Atmosph\u00e8re or Hekate+Atmosph\u00e8re). Reboot the console to apply patches.",
@@ -151,7 +152,11 @@
     "batch_copy": "Batch copy files",
     "batch_copy_not_found": "The following files were not found and couldn't be copied:\n",
     "batch_copy_config_not_found": "This tool allows you to copy files to other locations, which may be needed for your bootloader/trinket. Grab copy_files.json at 'https://git.io/aiosu_copy_files' and add it to your config folder. This will also be performed after updates.",
-    "language": "Изменить язык приложения"
+    "language": "Изменить язык приложения",
+    "outdated_titles": "Доступные обновления",
+    "latest_version_not_found": "Невозможно найти информацию об обновлении",
+    "outdated_titles_desc": "Есть обновления для следующих игр:"
+
   },
   "utils": {
     "fw_warning": "Раззмер архива слишком большой. Запустите программу в режиме тайтла - для этого запустите любую игру, удерживая кнопку R до появления Homebrew Menu",
