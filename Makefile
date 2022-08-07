@@ -16,13 +16,13 @@ include $(DEVKITPRO)/libnx/switch_rules
 # DATA is a list of directories containing data files
 # INCLUDES is a list of directories containing header files
 BUILD		:=	build
-SOURCES		:=	source lib/zipper/source
+SOURCES		:=	source
 RESOURCES	:=	resources
 DATA		:=	data
-INCLUDES	:=	include lib/zipper/include /lib/borealis/library/include/borealis/extern/nlohmann
+INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
 APP_TITLE	:=	Kefir Updater
 APP_AUTHOR	:=	HamletDuFromage, forked by xHR
-APP_VERSION :=  2.19.1-ku
+APP_VERSION :=  2.20.0-ku
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -55,7 +55,7 @@ CXXFLAGS	:= $(CFLAGS) -std=gnu++20 -fexceptions -Wno-reorder
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=$(DEVKITPRO)/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
-LIBS	:= -lm -lcurl -lnx -lz -lmbedtls -lmbedx509 -lmbedcrypto -lstdc++fs
+LIBS	:= -lm -lcurl -lnx -lz -lminizip -lmbedtls -lmbedx509 -lmbedcrypto -lstdc++fs
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
