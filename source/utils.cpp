@@ -305,6 +305,15 @@ namespace util {
         return (model == SetSysProductModel_Nx || model == SetSysProductModel_Copper);
     }
 
+        std::string getAppPath()
+    {
+        if (envHasArgv()) {
+            std::string argv = (char*)envGetArgv();
+            return fs::splitString(argv, '\"')[1].substr(5);
+        }
+        return NRO_PATH;
+    }
+
     void removeSysmodulesFlags(const std::string& directory)
     {
         for (const auto& e : std::filesystem::recursive_directory_iterator(directory)) {
