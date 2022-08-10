@@ -4,7 +4,8 @@ constexpr const char APP_PATH[] =           "/switch/kefir-updater/";
 constexpr const char NRO_PATH[] =           "/switch/kefir-updater/kefir-updater.nro";
 constexpr const char DOWNLOAD_PATH[] =      "/config/kefir-updater/";
 constexpr const char CONFIG_PATH[] =        "/config/kefir-updater/";
-constexpr const char CONFIG_PATH_UNZIP[] =   "config\\kefir-updater";
+constexpr const char CONFIG_PATH_UNZIP[] =  "config\\kefir-updater";
+constexpr const char CONFIG_FILE[] =        "/config/kefir-updater/config.json";
 
 constexpr const char RCM_PAYLOAD_PATH[] =   "/payload.bin";
 constexpr const char MARIKO_PAYLOAD_PATH[] = "/payload.bin";
