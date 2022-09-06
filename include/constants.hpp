@@ -17,7 +17,6 @@ constexpr const char APP_FILENAME[] =        "/config/kefir-updater/app.zip";
 
 constexpr const char NXLINKS_URL[] =         "https://raw.githubusercontent.com/rashevskyv/nx-links/master/nx-links.json";
 
-
 constexpr const char SIGPATCHES_URL[] =      "https://raw.githubusercontent.com/rashevskyv/nx-links/master/sigpatches.json";
 constexpr const char SIGPATCHES_FILENAME[] ="/config/kefir-updater/sigpatches.zip";
 constexpr const char HEKATE_IPL_PATH[] =    "/bootloader/hekate_ipl.ini";
