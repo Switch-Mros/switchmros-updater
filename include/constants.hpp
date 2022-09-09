@@ -27,6 +27,7 @@ constexpr const char FIRMWARE_PATH[] =      "/firmware/";
 
 constexpr const char CFW_URL[] =            "https://raw.githubusercontent.com/rashevskyv/nx-links/master/bootloaders.json";
 constexpr const char CFW_FILENAME[] =       "/config/kefir-updater/atmo.zip";
+constexpr const char BOOTLOADER_FILENAME[] =       "/config/kefir-updater/atmo.zip";
 
 constexpr const char AMS_URL[] =            "https://raw.githubusercontent.com/rashevskyv/nx-links/master/cfws.json";
 constexpr const char SXOS_URL[] =           "https://raw.githubusercontent.com/rashevskyv/nx-links/master/sxos.json";
