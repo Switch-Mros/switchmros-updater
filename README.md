@@ -1,13 +1,14 @@
-# Kefir-updater
+# SwitchBros-Updater
 
 <p align="center">
-<img src = "[[https://user-images.githubusercontent.com/18294541/119040795-8880cf80-b9be-11eb-88bd-6dac1d24ebe6.jpg](https://github.com/Switch-Bros/switchbros-updater/raw/master/icon.jpg)](https://github.com/Switch-Bros/switchbros-updater/blob/master/icon.jpg)"\><br>
+<img src = "https://i.imgur.com/R2NRQ1g.jpg"\><br>
 </p>
 
-A Nintendo Switch homebrew app to download and update Kefir, FWs and cheat codes. Based on [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) by [HamletDuFromage](https://github.com/HamletDuFromage)
+Eine Nintendo Switch Homebrew App um das Switch Bros. Paket herunterzuladen und zu aktualisieren.
+FWs and cheat codes. Based on [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) by [HamletDuFromage](https://github.com/HamletDuFromage)
 
-## How to install
-Copy the `kefir-updater.nro` directory to `/switch/kefir-updater` on your sdcard.
+## Installation
+Kopiere die `switchbros-updater.nro`in den Ordner `/switch/switchbros-updater` auf deiner SD-Karte.
 
 ## Description of the features
 ### ⬦ Update Kefir
