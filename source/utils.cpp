@@ -182,14 +182,14 @@ namespace util {
                 break;
             }
             case contentType::ams_cfw: {
-                if (std::filesystem::exists(KEFIR_DIRECTORY_PATH)) std::filesystem::remove_all(KEFIR_DIRECTORY_PATH);
-                std::filesystem::create_directory(KEFIR_DIRECTORY_PATH);
-                extract::extract(CFW_FILENAME, KEFIR_DIRECTORY_PATH, 1);
+                if (std::filesystem::exists(SWITCHBROS_DIRECTORY_PATH)) std::filesystem::remove_all(SWITCHBROS_DIRECTORY_PATH);
+                std::filesystem::create_directory(SWITCHBROS_DIRECTORY_PATH);
+                extract::extract(CFW_FILENAME, SWITCHBROS_DIRECTORY_PATH, 1);
 
-                if (std::filesystem::exists("/kefir/bootloader/hekate_ipl.ini")) {
-                    fs::copyFile("/kefir/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl.ini");
-                    fs::copyFile("/kefir/config/kefir-updater/kefir_updater.ini", "/bootloader/ini/!kefir_updater.ini");
-                    fs::copyFile("/kefir/bootloader/res/ku.bmp", "/bootloader/res/ku.bmp");
+                if (std::filesystem::exists("/switchbros/bootloader/hekate_ipl.ini")) {
+                    fs::copyFile("/switchbros/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl.ini");
+                    fs::copyFile("/switchbros/config/switchbros-updater/switchbros_updater.ini", "/bootloader/ini/!switchbros_updater.ini");
+                    fs::copyFile("/switchbros/bootloader/res/ku.bmp", "/bootloader/res/ku.bmp");
                     if (std::filesystem::exists(CFW_FILENAME)) std::filesystem::remove_all(CFW_FILENAME);
                 }
                 break;

@@ -31,7 +31,7 @@ AmsTab::AmsTab(const nlohmann::json& nxlinks, const bool erista, const bool cust
             fmt::format("menus/main/ams_text"_i18n), true);
         kefText->setHorizontalAlign(NVG_ALIGN_LEFT);
         this->addView(kefText);
-        this->addView(new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_kefir"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
+        this->addView(new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_switchbros"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
         CreateDownloadItems(util::getValueFromKey(cfws, "Atmosphere"));
 
         // this->addView(new brls::Label(
