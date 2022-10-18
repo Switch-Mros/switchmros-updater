@@ -20,8 +20,8 @@ SOURCES		:=	source
 RESOURCES	:=	resources
 DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
-APP_TITLE	:=	Kefir Updater
-APP_AUTHOR	:=	HamletDuFromage, forked by xHR
+APP_TITLE	:=	Switch Bros. Updater
+APP_AUTHOR	:=	HamletDuFromage, forked by Switch Bros.
 APP_VERSION :=  2.20.1-ku
 TARGET		:=	$(notdir $(CURDIR))
 
@@ -170,8 +170,8 @@ $(BUILD): $(ROMFS)
 	[ -d $(CURDIR)/output ] || mkdir -p $(CURDIR)/output
 	@[ -d $@ ] || mkdir -p $@
 	@MSYS2_ARG_CONV_EXCL="-D;$(MSYS2_ARG_CONV_EXCL)" $(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
-	@cp $(OUTPUT).nro $(CURDIR)/output/kefir-updater.nro
-	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro
+	@cp $(OUTPUT).nro $(CURDIR)/output/switchbros-updater.nro
+	@cp $(CURDIR)/output/switchbros-updater.nro ~/dev/_switchbros/switchbros/switch/switchbros-updater/switchbros-updater.nro
 
 #---------------------------------------------------------------------------------
 clean:
@@ -184,11 +184,11 @@ else
 endif
 
 nxlink:
-	nxlink -a 192.168.0.122 -p /kefir-updater/kefir-updater.nro output/kefir-updater.nro
+	nxlink -a 192.168.0.122 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
 
 copy:
-	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro
-	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.bin
+	@cp $(CURDIR)/output/switchbros-updater.nro ~/dev/_switchbros/switchbros/switch/switchbros-updater/switchbros-updater.nro
+	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin ~/dev/_switchbros/switchbros/switch/switchbros-updater/switchbros-updater.bin
 
 #---------------------------------------------------------------------------------
 else
