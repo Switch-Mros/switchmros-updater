@@ -6,7 +6,9 @@
 
 Eine Nintendo Switch Homebrew App um das Switch Bros. Paket, Firmwares und Cheats herunterzuladen und zu aktualisieren.
 
-Basierend auf [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) von [HamletDuFromage](https://github.com/HamletDuFromage)
+Basierend auf [kefir-updater](https://github.com/rashevskyv/kefir-updater) von [rashevskyv](https://github.com/rashevskyv)
+
+Original = [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) von [HamletDuFromage](https://github.com/HamletDuFromage)
 
 ## Installation
 Kopiere die `switchbros-updater.nro`in den Ordner `/switch/switchbros-updater` auf deiner SD-Karte.
