@@ -13,7 +13,7 @@ Kopiere die `switchbros-updater.nro`in den Ordner `/switch/switchbros-updater` a
 
 ## Description of the features
 ### ⬦ Switch Bros. aktualisieren
-- Lade unser [Switch Bros. Basis Paket](https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/tag/1.1.0/releases/) herunter. After downloading the CFW archive, the program will extract it and launch [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/) for installing CFW in a proper way
+- Lade unser [Switch Bros. Basis Paket](https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/tag/1.1.0) herunter. After downloading the CFW archive, the program will extract it and launch [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/) for installing CFW in a proper way
 
 ### ⬦ Firmware Downloads
 - Download firmare files to `/firmware` that can then be installed using DayBreak.
