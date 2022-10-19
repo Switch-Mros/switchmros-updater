@@ -4,20 +4,21 @@
 <img src = "https://i.imgur.com/R2NRQ1g.jpg"\><br>
 </p>
 
-Eine Nintendo Switch Homebrew App um das Switch Bros. Paket herunterzuladen und zu aktualisieren.
-FWs and cheat codes. Based on [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) by [HamletDuFromage](https://github.com/HamletDuFromage)
+Eine Nintendo Switch Homebrew App um das Switch Bros. Paket, Firmwares und Cheats herunterzuladen und zu aktualisieren.
+
+Basierend auf [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) von [HamletDuFromage](https://github.com/HamletDuFromage)
 
 ## Installation
 Kopiere die `switchbros-updater.nro`in den Ordner `/switch/switchbros-updater` auf deiner SD-Karte.
 
 ## Description of the features
-### ⬦ Update Kefir
-- Download the [Kefir](https://github.com/rashevskyv/kefir). After downloading the CFW archive, the program will extract it and launch [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/) for installing CFW in a proper way
+### ⬦ Switch Bros. aktualisieren
+- Lade unser [Switch Bros. Basis Paket](https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/tag/1.1.0) herunter. After downloading the CFW archive, the program will extract it and launch [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/) for installing CFW in a proper way
 
-### ⬦ Download firmwares
+### ⬦ Firmware Downloads
 - Download firmare files to `/firmware` that can then be installed using DayBreak.
 
-### ⬦ Download cheats
+### ⬦ Cheat Downloads
 - Downloads and extracts daily-updated cheat code. The program will only extract cheat codes for the games you own. By default, this homebrew will overwrite the existing cheats. If you have your own cheat files that you'd like to keep as is, you can turn off cheat updates for specific titles in `Tools->Cheat Menu`.
 - Since v2.0.0, aio-switch-updater can also download cheat sheets from [`CheatSlips.com`](https://www.cheatslips.com/). 
 
