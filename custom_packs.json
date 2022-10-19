@@ -1,9 +1,9 @@
 {
     "ams": {
-        "Switch Bros. Basis Paket": "https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/download/1.1.0/Switch.Bros.Basis.Paket.zip",
-        "Switch Bros. Daten Paket": "https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/download/1.1.0/Switch.Bros.Daten.Paket.zip"
+        "Switch Bros. Basis Paket": "https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/download/1.1.0/SwitchBros_BasisPaket.zip",
+        "Switch Bros. Daten Paket": "https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/download/1.1.0/SwitchBros_DatenPaket.zip"
     },
     "misc": {
-        "Switch Bros. ThemeApps Paket": "https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/download/1.1.0/Switch.Bros.ThemeApps.Paket.zip"
+        "Switch Bros. ThemeApps Paket": "https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/download/1.1.0/SwitchBros_ThemeAppsPaket.zip"
     }
 }
