@@ -1,5 +1,5 @@
 {
-    "about": true,
+    "about": false,
     "atmosphere": true,
     "atmosphereentries": true,
     "browser": true,
