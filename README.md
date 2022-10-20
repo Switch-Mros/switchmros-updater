@@ -74,11 +74,11 @@ Ich besitze, hoste oder vertreibe keine der Dateien, die mit diesem Homebrew-Too
 ## Besonderer Dank an
 - [natinusala](https://github.com/natinusala) für die Borealis Bibliothek.
 - [tiansongyu](https://github.com/tiansongyu) für die Unterstützung von mehreren Sprachen und der Chinesischen Übersetzung.
-- [yyoossk](https://github.com/yyoossk) für die japanische Sprachumgebung.
-- [sergiou87](https://github.com/sergiou87) für die spanische Sprachumgebung.
-- [pedruhb](https://github.com/pedruhb) für die brasilianische Sprachumgebung.
-- [AD2076](https://github.com/AD2076) für die italienische Sprachumgebung.
-- [qazrfv1234](https://github.com/qazrfv1234) für die Sprachumgebung in traditionellen chinesisch.
+- [yyoossk](https://github.com/yyoossk) für die japanische Übersetzung.
+- [sergiou87](https://github.com/sergiou87) für die spanische Übersetzung.
+- [pedruhb](https://github.com/pedruhb) für die brasilianische Übersetzung.
+- [AD2076](https://github.com/AD2076) für die italienische Übersetzung.
+- [qazrfv1234](https://github.com/qazrfv1234) für die Übersetzung in traditionellen chinesisch.
 - [Team Neptune](https://github.com/Team-Neptune) dessen rcm code ich nutze.
 - [fennectech](https://github.com/fennectech) dabei zu helfen die App zu testen und für seine Vorschläge.
 - Iliak für cheatslips.com.
