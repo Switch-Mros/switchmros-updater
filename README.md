@@ -80,7 +80,7 @@ Ich besitze, hoste oder vertreibe keine der Dateien, die mit diesem Homebrew-Too
 - [AD2076](https://github.com/AD2076) für die italienische Sprachumgebung.
 - [qazrfv1234](https://github.com/qazrfv1234) für die Sprachumgebung in traditionellen chinesisch.
 - [Team Neptune](https://github.com/Team-Neptune) dessen rcm code ich nutze.
-- [fennectech](https://github.com/fennectech) dabei zu helfen dir App zu testen und für seine Vorschläge.
+- [fennectech](https://github.com/fennectech) dabei zu helfen die App zu testen und für seine Vorschläge.
 - Iliak für cheatslips.com.
 
 ### Gefällt dir die App? Unterstütze den Original Entwickler!
