@@ -11,8 +11,8 @@ constexpr const char RCM_PAYLOAD_PATH[] =   "/payload.bin";
 constexpr const char MARIKO_PAYLOAD_PATH[] = "/payload.bin";
 constexpr const char MARIKO_PAYLOAD_PATH_TEMP[] = "/payload.bin.aio";
 
-constexpr const char APP_URL[] =            "https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/download/1.1.0/Switch.Bros.Basis.Paket.zip";
-constexpr const char TAGS_INFO[] =           "https://api.github.com/repos/rashevskyv/kefir-updater/releases/latest";
+constexpr const char APP_URL[] =            "https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/download/1.1.0/SwitchBros_BasisPaket.zip";
+constexpr const char TAGS_INFO[] =           "https://api.github.com/repos/Switch-Bros/switchbros-updater/releases/latest";
 constexpr const char APP_FILENAME[] =        "/config/switchbros-updater/app.zip";
 
 constexpr const char NXLINKS_URL[] =         "https://raw.githubusercontent.com/rashevskyv/nx-links/master/nx-links.json";
