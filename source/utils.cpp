@@ -189,7 +189,7 @@ namespace util {
                 if (std::filesystem::exists("/switchbros/bootloader/hekate_ipl.ini")) {
                     fs::copyFile("/switchbros/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl.ini");
                     fs::copyFile("/switchbros/config/switchbros-updater/switchbros_updater.ini", "/bootloader/ini/!switchbros_updater.ini");
-                    fs::copyFile("/switchbros/bootloader/res/ku.bmp", "/bootloader/res/ku.bmp");
+                    fs::copyFile("/switchbros/bootloader/res/sbu.bmp", "/bootloader/res/sbu.bmp");
                     if (std::filesystem::exists(CFW_FILENAME)) std::filesystem::remove_all(CFW_FILENAME);
                 }
                 break;
