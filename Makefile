@@ -22,7 +22,7 @@ DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
 APP_TITLE	:=	Switch Bros. Updater
 APP_AUTHOR	:=	HamletDuFromage, forked by Switch Bros.
-APP_VERSION :=  2.20.1-ku
+APP_VERSION :=  2.20.1-SB
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -184,7 +184,7 @@ else
 endif
 
 nxlink:
-	nxlink -a 192.168.0.122 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
+	nxlink -a 192.168.0.222 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
 
 copy:
 	@cp $(CURDIR)/output/switchbros-updater.nro ~/dev/_switchbros/switchbros/switch/switchbros-updater/switchbros-updater.nro
