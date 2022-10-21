@@ -104,7 +104,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
                      error += "\uE016 Browser konnte nicht gestartet werden.\n\uE016 Fehlercode: " + rc;
             }
             else {  // Running under applet
-                error += "Эта функция не доступна в режиме апплета (через альбомы).\nПожалуйста перезапустите программу в режиме тайтла (через форвардер или игру), чтобы воспользоваться ей.";
+                error += "Diese Funktion ist im Applet-Modus (über Album) nicht verfügbar.\nBitte starte die App über Title-Override neu (Forwarder oder Spiel), um sie zu benutzen.";
             }
             if (!error.empty()) {
                 util::showDialogBoxInfo(error);
