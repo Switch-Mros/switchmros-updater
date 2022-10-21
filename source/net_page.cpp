@@ -95,19 +95,9 @@ NetPage::NetPage() : AppletFrame(true, true)
                           {"dns_auto", true}}));
 
         profiles.push_back(
-            json::object({{"name", "90DNS (Europe)"},
-                          {"dns1", "163.172.141.219"},
-                          {"dns2", "207.246.121.77"}}));
-
-        profiles.push_back(
-            json::object({{"name", "90DNS (USA)"},
-                          {"dns1", "207.246.121.77"},
-                          {"dns2", "163.172.141.219"}}));
-
-        profiles.push_back(
-            json::object({{"name", "Google DNS"},
-                          {"dns1", "8.8.8.8"},
-                          {"dns2", "8.8.4.4"}}));
+            json::object({{"name", "Cloudflare DNS"},
+                          {"dns1", "1.1.1.1"},
+                          {"dns2", "1.0.0.1"}}));
 
         profiles.push_back(
             json::object({{"name", "ACNH mtu"},
