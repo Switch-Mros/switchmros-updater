@@ -94,14 +94,14 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
                 WebCommonReply out;
                 Result rc = webPageCreate(&conf, url.c_str());
                 if (R_FAILED(rc))
-                    error += "\uE016 Не могу запустить браузер.\n\uE016 Код ошибки: " + rc;
+                    error += "\uE016 Browser konnte nicht gestartet werden.\n\uE016 Fehlercode: " + rc;
                 webConfigSetJsExtension(&conf, true);
                 webConfigSetPageCache(&conf, true);
                 webConfigSetBootLoadingIcon(&conf, true);
                 webConfigSetWhitelist(&conf, ".*");
                 rc = webConfigShow(&conf, &out);
                 if (R_FAILED(rc))
-                     error += "\uE016 Не могу запустить браузер.\n\uE016 Код ошибки: " + rc;
+                     error += "\uE016 Browser konnte nicht gestartet werden.\n\uE016 Fehlercode: " + rc;
             }
             else {  // Running under applet
                 error += "Эта функция не доступна в режиме апплета (через альбомы).\nПожалуйста перезапустите программу в режиме тайтла (через форвардер или игру), чтобы воспользоваться ей.";
