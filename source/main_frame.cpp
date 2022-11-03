@@ -13,7 +13,7 @@
 
 namespace i18n = brls::i18n;
 using namespace i18n::literals;
-using json = nlohmann::json;
+using json = nlohmann::ordered_json;
 
 namespace {
     constexpr const char AppTitle[] = APP_TITLE;
@@ -37,7 +37,7 @@ MainFrame::MainFrame() : TabFrame()
     bool erista = util::isErista();
 
     if (!util::getBoolValue(hideStatus, "atmosphere"))
-        this->addTab("menus/main/update_ams"_i18n, new AmsTab(nxlinks, erista, false));
+        this->addTab("menus/main/update_ams"_i18n, new AmsTab_Regular(nxlinks, erista));
 
     if (!util::getBoolValue(hideStatus, "cfw"))
         this->addTab("menus/main/update_bootloaders"_i18n, new ListDownloadTab(contentType::bootloaders, nxlinks));
@@ -49,7 +49,7 @@ MainFrame::MainFrame() : TabFrame()
         this->addTab("menus/main/download_cheats"_i18n, new ListDownloadTab(contentType::cheats));
 
     if (!util::getBoolValue(hideStatus, "custom"))
-        this->addTab("menus/main/custom_downloads"_i18n, new AmsTab(nxlinks, erista, true));
+        this->addTab("menus/main/custom_downloads"_i18n, new AmsTab_Custom(nxlinks, erista));
 
     if (!util::getBoolValue(hideStatus, "tools"))
         this->addTab("menus/main/tools"_i18n, new ToolsTab(tag, util::getValueFromKey(nxlinks, "payloads"), erista, hideStatus));

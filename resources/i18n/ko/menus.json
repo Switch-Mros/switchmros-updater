@@ -29,7 +29,7 @@
     "sheet_content": "치트시트 내용",
     "cheatslips_select": "치트를 다운로드 할 게임을 선택하세요.",
     "cheatslips_wrong_id": "토큰을 검색할 수 없습니다. 로그인을 올바르게 입력했는지 확인하세요",
-    "kb_error": "키보드가 표시되지 않으면 전체 RAM 접속(타이틀 리다이렉션)으로 앱을 실행해 보세요.",
+    "kb_error": "키보드가 표시되지 않으면 전체 RAM 접속(타이틀 오버라이드)으로 앱을 실행해 보세요.",
     "cheatslips_see_more": "더 보기",
     "cheatslips_dl_cheats": "치트를 다운로드하고 돌아가기",
     "bid_not_found": "빌드 ID를 가져올 수 없습니다. 게임이 실행되는 동안 애플릿 모드에서 일체형-스위치-업데이터를 실행해 보세요.",
@@ -70,13 +70,10 @@
     "cancel": "취소",
     "off": "사용 안 함",
     "selected": "선택됨",
-    "applet_mode_not_supported": "이 기능은 애플릿 모드에서 사용할 수 없습니다. 접속하려면 타이틀 리다이렉션을 통해 일체형-스위치-업데이터를 시작하세요."
+    "applet_mode_not_supported": "이 기능은 애플릿 모드에서 사용할 수 없습니다. 접속하려면 타이틀 오버라이드를 통해 일체형-스위치-업데이터를 시작하세요."
   },
   "changelog": {
     "changelog": "변경기록"
-  },
-  "sigpatches": {
-    "reboot": "변경 사항은 다음 부팅 시 적용됩니다."
   },
   "payloads": {
     "dl_payloads": "페이로드 다운로드",
@@ -110,8 +107,6 @@
     "cheats_text": "\u25c6 'gbatemp.net'에서 매일 업데이트되는 치트 코드 아카이브를 다운로드합니다. 설치하지 않은 게임의 치트 코드는 SD 카드에 추출되지 않습니다. '도구→치트 메뉴'에서 특정 게임에 대한 치트 업데이트를 끌 수 있습니다.\n\u25c6 현재 치트 버전: ",
     "get_cheats": "GBAtemp.net 치트 아카이브 (ver {}) 다운로드",
     "get_all_cheats:": "GBAtemp.net 치트 아카이브 다운로드",
-    "sigpatches": "시그패치",
-    "sigpatches_text": "\u25c6 시그패치를 사용하면 스위치에서 비공식 NSP 파일을 설치하고 실행할 수 있습니다. 콘솔을 재부팅하여 패치를 적용하세요.",
     "firmware": "펌웨어",
     "not_found": "찾을 수 없음",
     "latest_cheats": "최신 버전",
@@ -128,7 +123,6 @@
     "update_ams": "Atmosphère 업데이트",
     "update_cfw": "커스텀 펌웨어 업데이트",
     "update_bootloaders": "부트로더 업데이트",
-    "update_sigpatches": "스그패치 업데이트",
     "download_firmware": "펌웨어 다운로드",
     "download_cheats": "치트 다운로드",
     "tools": "도구",

@@ -2,6 +2,7 @@
 constexpr const char ROOT_PATH[]=           "/";
 constexpr const char APP_PATH[] =           "/switch/kefir-updater/";
 constexpr const char NRO_PATH[] =           "/switch/kefir-updater/kefir-updater.nro";
+constexpr const char NRO_PATH_REGEX[] =     ".*(/switch/kefir-updater.*kefir-updater.nro).*";
 constexpr const char DOWNLOAD_PATH[] =      "/config/kefir-updater/";
 constexpr const char CONFIG_PATH[] =        "/config/kefir-updater/";
 constexpr const char CONFIG_PATH_UNZIP[] =  "config\\kefir-updater";
@@ -16,9 +17,7 @@ constexpr const char TAGS_INFO[] =           "https://api.github.com/repos/rashe
 constexpr const char APP_FILENAME[] =        "/config/kefir-updater/app.zip";
 
 constexpr const char NXLINKS_URL[] =         "https://raw.githubusercontent.com/rashevskyv/nx-links/master/nx-links.json";
-
-constexpr const char SIGPATCHES_URL[] =      "https://raw.githubusercontent.com/rashevskyv/nx-links/master/sigpatches.json";
-constexpr const char SIGPATCHES_FILENAME[] ="/config/kefir-updater/sigpatches.zip";
+constexpr const char CUSTOM_FILENAME[] =    "/config/kefir-updater/custom.zip";
 constexpr const char HEKATE_IPL_PATH[] =    "/bootloader/hekate_ipl.ini";
 
 constexpr const char FIRMWARE_URL[] =       "https://raw.githubusercontent.com/rashevskyv/nx-links/master/firmwares.json";
@@ -83,12 +82,6 @@ constexpr const char REBOOT_PAYLOAD_PATH[] ="/atmosphere/reboot_payload.bin";
 constexpr const char FUSEE_SECONDARY[] =    "/atmosphere/fusee-secondary.bin";
 constexpr const char FUSEE_MTC[] =          "/atmosphere/fusee-mtc.bin";
 
-constexpr const char AMS_ZIP_PATH[] =       "/config/kefir-updater/ams.zip";
-constexpr const char APP_ZIP_PATH[] =       "/config/kefir-updater/app.zip";
-constexpr const char CFW_ZIP_PATH[] =       "/config/kefir-updater/cfw.zip";
-constexpr const char FW_ZIP_PATH[] =        "/config/kefir-updater/firmware.zip";
-constexpr const char CHEATS_ZIP_PATH[] =    "/config/kefir-updater/cheats.zip";
-constexpr const char SIGPATCHES_ZIP_PATH[] ="/config/kefir-updater/sigpatches.zip";
 constexpr const char AMS_DIRECTORY_PATH[] = "/config/kefir-updater/atmosphere/";
 constexpr const char SEPT_DIRECTORY_PATH[] ="/config/kefir-updater/sept/";
 constexpr const char FW_DIRECTORY_PATH[] =  "/firmware/";
@@ -113,7 +106,7 @@ constexpr const int LISTITEM_HEIGHT =       50;
 
 enum class contentType
 {
-    sigpatches,
+    custom,
     cheats,
     fw,
     app,
@@ -123,7 +116,7 @@ enum class contentType
     hekate_ipl,
 };
 
-constexpr std::string_view contentTypeNames[8]{"sigpatches", "cheats", "firmwares", "app", "bootloaders", "cfws", "payloads", "hekate_ipl"};
+constexpr std::string_view contentTypeNames[8]{"custom", "cheats", "firmwares", "app", "bootloaders", "cfws", "payloads", "hekate_ipl"};
 
 enum class CFW
 {

@@ -9,7 +9,7 @@
 
 namespace i18n = brls::i18n;
 using namespace i18n::literals;
-using json = nlohmann::json;
+using json = nlohmann::ordered_json;
 
 HideTabsPage::HideTabsPage() : AppletFrame(true, true)
 {
@@ -37,7 +37,7 @@ HideTabsPage::HideTabsPage() : AppletFrame(true, true)
 
     cheats = new brls::ToggleListItem("menus/main/download_cheats"_i18n, util::getBoolValue(hideStatus, "cheats"));
     list->addView(cheats);
-
+	
     custom = new brls::ToggleListItem("menus/main/custom_downloads"_i18n, util::getBoolValue(hideStatus, "custom"));
     list->addView(custom);
 
@@ -74,7 +74,7 @@ HideTabsPage::HideTabsPage() : AppletFrame(true, true)
     list->registerAction("menus/cheats/exclude_titles_save"_i18n, brls::Key::B, [this] {
         json updatedStatus = json::object();
         updatedStatus["about"] = about->getToggleState();
-        updatedStatus["atmosphere"] = ams->getToggleState();
+        updatedStatus["atmosphere"] = ams->getToggleState();											 
         updatedStatus["cfw"] = cfws->getToggleState();
         updatedStatus["firmwares"] = fws->getToggleState();
         updatedStatus["cheats"] = cheats->getToggleState();

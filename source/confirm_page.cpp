@@ -17,15 +17,16 @@ ConfirmPage::ConfirmPage(brls::StagedAppletFrame* frame, const std::string& text
     this->button->getClickEvent()->subscribe([frame, this](View* view) {
         if (!frame->isLastStage())
             frame->nextStage();
-        else 
+        else
             brls::Application::pushView(new MainFrame());
     });
 
     this->label = new brls::Label(brls::LabelStyle::DIALOG, text, true);
     this->label->setHorizontalAlign(NVG_ALIGN_CENTER);
     this->label->setParent(this);
-    }
-   ConfirmPage_Done::ConfirmPage_Done(brls::StagedAppletFrame* frame, const std::string& text) : ConfirmPage(frame, text)
+}
+
+ConfirmPage_Done::ConfirmPage_Done(brls::StagedAppletFrame* frame, const std::string& text) : ConfirmPage(frame, text)
 {
     this->button->setLabel("menus/common/back"_i18n);
     this->done = true;
@@ -34,7 +35,7 @@ ConfirmPage::ConfirmPage(brls::StagedAppletFrame* frame, const std::string& text
 ConfirmPage_AppUpdate::ConfirmPage_AppUpdate(brls::StagedAppletFrame* frame, const std::string& text) : ConfirmPage_Done(frame, text)
 {
     this->button->getClickEvent()->subscribe([](View* view) {
-        envSetNextLoad(FORWARDER_PATH, fmt::format("\"{}\"", FORWARDER_PATH).c_str());
+        envSetNextLoad(FORWARDER_PATH, FORWARDER_PATH);
         romfsExit();
         brls::Application::quit();
     });
