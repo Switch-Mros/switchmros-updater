@@ -19,7 +19,8 @@ AmsTab::AmsTab(const nlohmann::ordered_json& nxlinks, const bool erista) : brls:
 {
     this->erista = erista;
     this->nxlinks = nxlinks;
-    this->hekate = util::getValueFromKey(nxlinks, "hekate");
+    auto cfws = util::getValueFromKey(nxlinks, "cfws");
+    this->hekate = util::getValueFromKey(cfws, "Atmosphere");
 }
 
 void AmsTab::RegisterListItemAction(brls::ListItem* listItem) {}
@@ -64,14 +65,14 @@ void AmsTab::CreateStagedFrames(const std::string& text, const std::string& url,
         new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, [&, url]() { util::downloadArchive(url, this->type); }));
     stagedFrame->addStage(
         new WorkerPage(stagedFrame, "menus/common/extracting"_i18n, [&]() { util::extractArchive(this->type); }));
-    if (hekate) {
-        stagedFrame->addStage(
-            new DialoguePage_ams(stagedFrame, text_hekate, erista));
-        stagedFrame->addStage(
-            new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, [hekate_url]() { util::downloadArchive(hekate_url, contentType::bootloaders); }));
-        stagedFrame->addStage(
-            new WorkerPage(stagedFrame, "menus/common/extracting"_i18n, []() { util::extractArchive(contentType::bootloaders); }));
-    }
+    // if (hekate) {
+    //     stagedFrame->addStage(
+    //         new DialoguePage_ams(stagedFrame, text_hekate, erista));
+    //     stagedFrame->addStage(
+    //         new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, [hekate_url]() { util::downloadArchive(hekate_url, contentType::bootloaders); }));
+    //     stagedFrame->addStage(
+    //         new WorkerPage(stagedFrame, "menus/common/extracting"_i18n, []() { util::extractArchive(contentType::bootloaders); }));
+    // }
     if (ams)
         stagedFrame->addStage(new ConfirmPage_AmsUpdate(stagedFrame, "menus/ams_update/reboot_rcm"_i18n, erista));
     else
@@ -103,7 +104,13 @@ void AmsTab_Regular::CreateLists()
     this->type = contentType::ams_cfw;
     auto cfws = util::getValueFromKey(this->nxlinks, "cfws");
 
-    this->addView(new brls::Label(brls::LabelStyle::DESCRIPTION, "menus/main/ams_text"_i18n + (CurrentCfw::running_cfw == CFW::ams ? "\n" + "menus/ams_update/current_ams"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
+    brls::Label* kefText = new brls::Label(
+    brls::LabelStyle::DESCRIPTION,
+        fmt::format("menus/main/kefir_text"_i18n), true);
+    kefText->setHorizontalAlign(NVG_ALIGN_LEFT);
+
+    this->addView(kefText);
+    this->addView(new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_kefir"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
     CreateDownloadItems(util::getValueFromKey(cfws, "Atmosphere"));
 
     // this->addView(new brls::Label(

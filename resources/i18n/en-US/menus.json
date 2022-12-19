@@ -117,6 +117,7 @@
     "cfw": "CFW",
     "ams": "Atmosphère",
     "ams_text": "\u25c6 From this menu, you can download and update the Atmosphère custom firmware necessary to run homebrew software.",
+    "kefir_text": "\u25c6 From this menu, you can download and update the Kefir custom firmware necessary to run homebrew software.",
     "cfw_text": "\u25c6 Alternative CFWs, bootloaders.",
     "bootloaders_text": "\u25c6 Download and update bootloaders.",
     "cheats": "cheats",
