@@ -164,7 +164,7 @@ namespace util {
                 break;
             }
             case contentType::fw:
-                if (std::filesystem::exists(FIRMWARE_PATH)) std::filesystem::remove_all(FIRMWARE_PATH);
+                fs::removeDir(FIRMWARE_PATH);
                 fs::createTree(FIRMWARE_PATH);
                 extract::extract(FIRMWARE_FILENAME, FIRMWARE_PATH);
                 if (std::filesystem::exists(FIRMWARE_FILENAME)) std::filesystem::remove(FIRMWARE_FILENAME);
@@ -174,13 +174,13 @@ namespace util {
                 fs::copyFile(ROMFS_FORWARDER, FORWARDER_PATH);
                 break;
             case contentType::custom: {
-                int overwriteInis = showDialogBoxBlocking("menus/utils/overwrite_inis"_i18n, "menus/common/no"_i18n, "menus/common/yes"_i18n);
-                extract::extract(CUSTOM_FILENAME, ROOT_PATH, overwriteInis);
+                int preserveInis = showDialogBoxBlocking("menus/utils/overwrite_inis"_i18n, "menus/common/yes"_i18n, "menus/common/no"_i18n);
+                extract::extract(CUSTOM_FILENAME, ROOT_PATH, preserveInis);
                 break;
             }
             case contentType::bootloaders: {
-                int overwriteInis = showDialogBoxBlocking("menus/utils/overwrite_inis"_i18n, "menus/common/no"_i18n, "menus/common/yes"_i18n);
-                extract::extract(BOOTLOADER_FILENAME, ROOT_PATH, overwriteInis);
+                int preserveInis = showDialogBoxBlocking("menus/utils/overwrite_inis"_i18n, "menus/common/yes"_i18n, "menus/common/no"_i18n);
+                extract::extract(BOOTLOADER_FILENAME, ROOT_PATH, preserveInis);
                 break;
             }
             case contentType::ams_cfw: {
@@ -275,9 +275,9 @@ namespace util {
     std::string getCheatsVersion()
     {
         std::string res = util::downloadFileToString(CHEATS_URL_VERSION);
-        if (res == "" && isArchive(CHEATS_FILENAME)) {
+        /* if (res == "" && isArchive(CHEATS_FILENAME)) {
             res = "offline";
-        }
+        } */
         return res;
     }
 

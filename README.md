@@ -1,5 +1,12 @@
 # Kefir-updater
 
+<a href="https://liberapay.com/HamletDuFromage/donate"><img alt="Donate using Liberapay to switch-aio-updater's author HamletDuFromage" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+[![btc](https://img.shields.io/badge/BTC-1CoFc1bY5AHLP6Noe1zmqnJnp7ZWBxyo79-yellow?logo=bitcoin)](https://github.com/HamletDuFromage/aio-switch-updater#like-the-app)
+[![eth](https://img.shields.io/badge/ETH-0xf68f568e21a15934e0e9a6949288c3ca009140ba-purple?logo=ethereum)](https://github.com/HamletDuFromage/aio-switch-updater#like-the-app)
+[![xmr](https://img.shields.io/badge/XMR-88wjCuhHX3oNhVpEdYeUx3LvrkdTvcTHx7v7L5fQpjCg7QiAReJUVR4LPase5Byj2UhdVdLtvysJaXTFKq2EnuvuLjvQMGL-orange?logo=monero)](https://github.com/HamletDuFromage/aio-switch-updater#like-the-app)
+
+<!-- ([![ko-fi](https://img.shields.io/badge/ko--fi-buy%20me%20a%20coffee-ff69b4)](https://ko-fi.com/hamletdufromage)) -->
+
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/18294541/119040795-8880cf80-b9be-11eb-88bd-6dac1d24ebe6.jpg"\><br>
 </p>
@@ -81,7 +88,8 @@ I do not own, host nor distribute any of the files that can be downloaded with t
 - Iliak for cheatslips.com.
 
 ### Like the app?
-- Liberapay : <a href="https://liberapay.com/HamletDuFromage/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+
+- Liberapay : <a href="https://liberapay.com/HamletDuFromage/donate"><img alt="Donate using Liberapay to switch-aio-updater's author HamletDuFromage" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 - BTC: 1CoFc1bY5AHLP6Noe1zmqnJnp7ZWBxyo79
 - ETH: 0xf68f568e21a15934e0e9a6949288c3ca009140ba
-- CHAINLINK: 0xf68f568e21a15934e0e9a6949288c3ca009140ba
+- Monero (XMR): 88wjCuhHX3oNhVpEdYeUx3LvrkdTvcTHx7v7L5fQpjCg7QiAReJUVR4LPase5Byj2UhdVdLtvysJaXTFKq2EnuvuLjvQMGL
