@@ -1,35 +1,31 @@
-# Kefir-updater
-
-<a href="https://liberapay.com/HamletDuFromage/donate"><img alt="Donate using Liberapay to switch-aio-updater's author HamletDuFromage" src="https://liberapay.com/assets/widgets/donate.svg"></a>
-[![btc](https://img.shields.io/badge/BTC-1CoFc1bY5AHLP6Noe1zmqnJnp7ZWBxyo79-yellow?logo=bitcoin)](https://github.com/HamletDuFromage/aio-switch-updater#like-the-app)
-[![eth](https://img.shields.io/badge/ETH-0xf68f568e21a15934e0e9a6949288c3ca009140ba-purple?logo=ethereum)](https://github.com/HamletDuFromage/aio-switch-updater#like-the-app)
-[![xmr](https://img.shields.io/badge/XMR-88wjCuhHX3oNhVpEdYeUx3LvrkdTvcTHx7v7L5fQpjCg7QiAReJUVR4LPase5Byj2UhdVdLtvysJaXTFKq2EnuvuLjvQMGL-orange?logo=monero)](https://github.com/HamletDuFromage/aio-switch-updater#like-the-app)
-
-<!-- ([![ko-fi](https://img.shields.io/badge/ko--fi-buy%20me%20a%20coffee-ff69b4)](https://ko-fi.com/hamletdufromage)) -->
+# SwitchBros-Updater
 
 <p align="center">
-<img src = "https://user-images.githubusercontent.com/18294541/119040795-8880cf80-b9be-11eb-88bd-6dac1d24ebe6.jpg"\><br>
+<img src = "https://i.imgur.com/R2NRQ1g.jpg"\><br>
 </p>
 
-A Nintendo Switch homebrew app to download and update Kefir, FWs and cheat codes. Based on [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) by [HamletDuFromage](https://github.com/HamletDuFromage)
+Eine Nintendo Switch Homebrew App um das Switch Bros. Paket, Firmwares und Cheats herunterzuladen und zu aktualisieren.
 
-## How to install
-Copy the `kefir-updater.nro` directory to `/switch/kefir-updater` on your sdcard.
+Basierend auf [kefir-updater](https://github.com/rashevskyv/kefir-updater) von [rashevskyv](https://github.com/rashevskyv) 
+Original = [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) von [HamletDuFromage](https://github.com/HamletDuFromage)
 
-## Description of the features
-### ⬦ Update Kefir
-- Download the [Kefir](https://github.com/rashevskyv/kefir). After downloading the CFW archive, the program will extract it and launch [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/) for installing CFW in a proper way
+## Installation
+Kopiere die `switchbros-updater.nro`in den Ordner `/switch/switchbros-updater` auf deiner SD-Karte.
 
-### ⬦ Download firmwares
-- Download firmare files to `/firmware` that can then be installed using DayBreak.
+## Beschreibung der Funktionen
+### ⬦ Switch Bros. aktualisieren
+- Lade unser [Switch Bros. Basis Paket](https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/tag/1.1.0) herunter. Nach dem herunterladen unseres Pakets, wird es entpackt und deine Switch in die Payload [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/) gestartet um das Paket korrekt zu installieren/aktualisieren.
 
-### ⬦ Download cheats
-- Downloads and extracts daily-updated cheat code. The program will only extract cheat codes for the games you own. By default, this homebrew will overwrite the existing cheats. If you have your own cheat files that you'd like to keep as is, you can turn off cheat updates for specific titles in `Tools->Cheat Menu`.
-- Since v2.0.0, aio-switch-updater can also download cheat sheets from [`CheatSlips.com`](https://www.cheatslips.com/). 
+### ⬦ Firmware Downloads
+- Lade Firmwares in den `/firmware` Ordner runter und installiere sie mit der App DayBreak.
 
-## Extras (in the `Tools` tab)
-- View which of your games got cheat codes from the app.
-- Launch the Switch's web browser.
+### ⬦ Cheat Downloads
+- Herunterladen und extrahieren täglich aktualisierter Cheats. Die App extrahiert nur die Cheats von Spielen die installiert sind. Standardmäßig, überschreibt diese App vorhandene Cheats. Wenn du deine eigene Cheats hast die unverändert bleiben sollen, dann kannst du Cheat updates für bestimmte Titel in `Tools->Cheat Menü` ausstellen.
+- Seit Version 2.0.0, kann aio-switch-updater Cheat Seiten von  [`CheatSlips.com`](https://www.cheatslips.com/) herunterladen. 
+
+## Extras (im Reiter `Tools`)
+- Schau nach welche Spiele Cheats besitzen.
+- Starte den Internet Browser der Switch.
 
 ## Screenshots
 ![2021052023004100](https://user-images.githubusercontent.com/18294541/119041468-5754cf00-b9bf-11eb-9b98-9583f11445ed.jpg)
@@ -40,10 +36,10 @@ Copy the `kefir-updater.nro` directory to `/switch/kefir-updater` on your sdcard
 ![2021052023005500](https://user-images.githubusercontent.com/18294541/119041474-591e9280-b9bf-11eb-8c0e-f668505cd6ce.jpg)
 ![2021052023010100](https://user-images.githubusercontent.com/18294541/119041476-591e9280-b9bf-11eb-85e3-451d940bbd0c.jpg)
 
-## Build
-You need to have installed devkitPro and devkitARM in order to compile this project.
+## Kompilieren
+Du musst devkitPro und devkitARM installiert haben um dieses Projekt zu kompilieren.
 
-Install the required dependencies:
+Installiere die benötigten Zusatzmodule:
 ```bash
 $ sudo (dkp-)pacman -Sy
 ```
@@ -58,13 +54,13 @@ Use [`switch-ex-curl`](https://github.com/eXhumer/switch-ex-curl) instead of `sw
 
 Use portlibs and build with libnx provided in this repository
 
-Clone the repository
+Repository klonen
 ```bash
 $ git clone --recursive https://github.com/HamletDuFromage/aio-switch-updater
 $ cd aio-switch-updater
 ```
 
-Compile 
+Kompilieren 
 ```bash
 $ cd aiosu-forwarder
 $ make
@@ -72,24 +68,23 @@ $ cd ..
 $ make
 ```
 
-## Disclaimer
-I do not own, host nor distribute any of the files that can be downloaded with this homebrew tool. At the owner's request, I will immediately remove the ability to download any problematic file.
+## Haftungsausschluss
+Ich besitze, hoste oder vertreibe keine der Dateien, die mit diesem Homebrew-Tool heruntergeladen werden können. Auf Anfrage des Eigentümers werde ich die Möglichkeit, problematische Dateien herunterzuladen, sofort entfernen.
 
-## Special thanks
-- [natinusala](https://github.com/natinusala) for the Borealis library.
-- [tiansongyu](https://github.com/tiansongyu) for bringing support for multi-language and for his Chinese translation.
-- [yyoossk](https://github.com/yyoossk) for the Japanese locale.
-- [sergiou87](https://github.com/sergiou87) for the Spanish locale.
-- [pedruhb](https://github.com/pedruhb) for the Brazilian locale.
-- [AD2076](https://github.com/AD2076) for the Italian locale.
-- [qazrfv1234](https://github.com/qazrfv1234) for the Traditional Chinese locale.
-- [Team Neptune](https://github.com/Team-Neptune) whose rcm code I used.
-- [fennectech](https://github.com/fennectech) for helping test the app and providing suggestions.
-- Iliak for cheatslips.com.
+## Besonderer Dank an
+- [natinusala](https://github.com/natinusala) für die Borealis Bibliothek.
+- [tiansongyu](https://github.com/tiansongyu) für die Unterstützung von mehreren Sprachen und der Chinesischen Übersetzung.
+- [yyoossk](https://github.com/yyoossk) für die japanische Übersetzung.
+- [sergiou87](https://github.com/sergiou87) für die spanische Übersetzung.
+- [pedruhb](https://github.com/pedruhb) für die brasilianische Übersetzung.
+- [AD2076](https://github.com/AD2076) für die italienische Übersetzung.
+- [qazrfv1234](https://github.com/qazrfv1234) für die Übersetzung in traditionellen chinesisch.
+- [Team Neptune](https://github.com/Team-Neptune) dessen rcm code ich nutze.
+- [fennectech](https://github.com/fennectech) dabei zu helfen die App zu testen und für seine Vorschläge.
+- Iliak für cheatslips.com.
 
-### Like the app?
-
-- Liberapay : <a href="https://liberapay.com/HamletDuFromage/donate"><img alt="Donate using Liberapay to switch-aio-updater's author HamletDuFromage" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+### Gefällt dir die App? Unterstütze den Original Entwickler!
+- Liberapay : <a href="https://liberapay.com/HamletDuFromage/donate"><img alt="Spenden mit Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 - BTC: 1CoFc1bY5AHLP6Noe1zmqnJnp7ZWBxyo79
 - ETH: 0xf68f568e21a15934e0e9a6949288c3ca009140ba
-- Monero (XMR): 88wjCuhHX3oNhVpEdYeUx3LvrkdTvcTHx7v7L5fQpjCg7QiAReJUVR4LPase5Byj2UhdVdLtvysJaXTFKq2EnuvuLjvQMGL
+- CHAINLINK: 0xf68f568e21a15934e0e9a6949288c3ca009140ba
