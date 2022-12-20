@@ -20,9 +20,9 @@ SOURCES		:=	source
 RESOURCES	:=	resources
 DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
-APP_TITLE	:=	Kefir Updater
-APP_AUTHOR	:=	HamletDuFromage, forked by xHR
-APP_VERSION :=  2.21.3-ku
+APP_TITLE	:=	SwitchBros Updater
+APP_AUTHOR	:=	HamletDuFromage, forked by SwitchBros
+APP_VERSION :=  2.21.3-SB
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -161,8 +161,8 @@ $(ROMFS):
 	@[ -d $@ ] || mkdir -p $@
 	@echo Merging ROMFS...
 	@cp -ruf $(CURDIR)/$(BOREALIS_PATH)/resources/i18n/. $(CURDIR)/$(ROMFS)/i18n/
-	@cp -ruf $(CURDIR)/$(ROMFS)/i18n/zh-CN/. $(CURDIR)/$(ROMFS)/i18n/zh-Hans/
-	@cp -ruf $(CURDIR)/$(ROMFS)/i18n/zh-TW/. $(CURDIR)/$(ROMFS)/i18n/zh-Hant/
+#	@cp -ruf $(CURDIR)/$(ROMFS)/i18n/zh-CN/. $(CURDIR)/$(ROMFS)/i18n/zh-Hans/
+#	@cp -ruf $(CURDIR)/$(ROMFS)/i18n/zh-TW/. $(CURDIR)/$(ROMFS)/i18n/zh-Hant/
 	@rm -rf $(CURDIR)/$(ROMFS)/i18n/*/installer.json $(CURDIR)/$(ROMFS)/i18n/*/main.json $(CURDIR)/$(ROMFS)/i18n/*/popup.json $(CURDIR)/$(ROMFS)/i18n/*/custom_layout.json
 
 $(BUILD): $(ROMFS)
@@ -170,8 +170,8 @@ $(BUILD): $(ROMFS)
 	[ -d $(CURDIR)/output ] || mkdir -p $(CURDIR)/output
 	@[ -d $@ ] || mkdir -p $@
 	@MSYS2_ARG_CONV_EXCL="-D;$(MSYS2_ARG_CONV_EXCL)" $(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
-	@cp $(OUTPUT).nro $(CURDIR)/output/kefir-updater.nro
-	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro
+	@cp $(OUTPUT).nro $(CURDIR)/output/switchbros-updater.nro
+	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
 
 #---------------------------------------------------------------------------------
 clean:
@@ -184,11 +184,11 @@ else
 endif
 
 nxlink:
-	nxlink -a 192.168.0.103 -p /kefir-updater/kefir-updater.nro output/kefir-updater.nro
+	nxlink -a 192.168.0.223 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
 
 copy:
-	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro
-	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.bin
+	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
+	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.bin
 
 #---------------------------------------------------------------------------------
 else
