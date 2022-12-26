@@ -35,7 +35,7 @@
     "cheatslips_dl_cheats": "Lade Cheats & gehe zurück",
     "bid_not_found": "ID konnte nicht abgerufen werden. Versuche, AIO-Switch-Updater im Applet-Modus zu starten, während das Spiel läuft.",
     "exclude_titles": "Spiele ausschließen",
-    "exclude_titles_desc": "Mit diesem Menü kannst du Cheat-Udates ausschließen",
+    "exclude_titles_desc": "Du kannst Cheat-Updates für Spiele aus der folgenden Liste deaktivieren ('Ein' - Cheats aktualisieren, 'Aus' - nicht aktualisieren)",
     "exclude_titles_save": "Auswahl speichern und zurück",
     "dl_all": "Das gesamte GBAtemp.net Cheat-Archiv herunterladen und enptacken",
     "gbatemp_dl": "Lade von GBAtemp.net verwaltete Cheat-Codes herunter. Diese Cheats werden am Ende deiner bestehenden Cheat-Datei hinzugefügt.",
@@ -53,7 +53,7 @@
     "old_cheats_found": "Zu diesem/r BID passende Cheats gefunden - [ {}].",
     "cheatslips_logout": "Ausloggen"
 
- },
+  },
   "common": {
     "downloading": "Wird heruntergeladen…",
     "extracting": "Wird entpackt…",
@@ -78,7 +78,7 @@
     "changelog": "Changelog"
   },
   "sigpatches": {
-    "reboot": "Изменения вступят в силу после перезагрузки приставки."
+    "reboot": "Die Änderungen werden wirksam, wenn die Konsole neu gestartet wurde."
   },
   "payloads": {
     "dl_payloads": "Payloads herunterladen",
@@ -149,7 +149,7 @@
     "dl_payloads": "Lade Payloads hierhin herunter: ",
     "inject_payloads": "Injiziere Payload",
     "update_app": "Update die App (v{})",
-    "dl_app": "Lade herunter:\nAIO-Switch-Updater\n\nVon:\n",
+    "dl_app": "Lade herunter:\nSwitchBros-Updater\n\nVon:\n",
     "changelog": "Changelog",
     "clean_up": "Lösche übrig gebliebende Dateien",
     "hide_tabs": "Tabs verstecken",
@@ -162,7 +162,6 @@
     "outdated_titles": "Aktualisierungen verfügbar",
     "latest_version_not_found": "Infos zur Aktualisierung konnten nicht gefunden werden",
     "outdated_titles_desc": "Es gibt Aktualisierungen für folgende Spiele:"
-
   },
   "utils": {
     "fw_warning": "Wegen der Größe der Firmwarearchive werden Downloads im Applet Mode nicht unterstützt. Bitte öffne die App mit vollem RAM Zugriff (Title Override).",
@@ -177,7 +176,7 @@
     "install_hekate": "Möchtest du auch Hekate herunterladen?\nFalls nein, wird die Switch nun zu einem Speziellem Payload rebooten, um den Installationsprozess abzuschließen.",
     "delete_contents": "Möchtest du den bestehenden '/atmosphere/contents/' Ordner löschen? Dies wird Crashes vorbeugen, falls ein Sysmodul die neueste Atmosphère Version nicht unterstützt. Bedenke, dass dies all deine Sysmodules, Mods und Cheats löscht!",
     "delete_sysmodules_flags": "Möchtest du den Autostart von allen Sysmodules verhindern? Dies wird Crashes vorbeugen, falls ein Sysmodul die neueste Atmosphère Version nicht unterstützt.",
-    "current_kefir": "Aktuelle Version: \n\ue016 SwitchBros: ",
+    "current_switchbros": "Aktuelle Version: \n\ue016 SwitchBros: ",
     "getting_ams": "SwitchBros aktualisieren",
     "current_ams": "\u25c6 Aktuelle Version von Atmosphère:",
     "erista_rev": "\u25c6 Revision: Erista",
@@ -197,6 +196,6 @@
   "language": {
     "system_default": "System Standard",
     "en-US": "American English (en-US)",
-    "de": "German (de)
+    "de": "Deutsch (de)"
   }
 }

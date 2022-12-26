@@ -184,7 +184,7 @@ else
 endif
 
 nxlink:
-	nxlink -a 192.168.0.223 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
+	nxlink -a 192.168.178.223 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
 
 copy:
 	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
