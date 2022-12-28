@@ -70,7 +70,9 @@
     "go_back": "Zurück",
     "confirm": "Bestätigen",
     "cancel": "Abbrechen",
-    "applet_mode_not_supported": "Diese Funktion ist im Applet-Modus nicht verfügbar. Bitte starte den switchbros-Updater über Title-Override, um darauf zuzugreifen."
+    "off": "Ausschalten",
+    "selected": "Ausgewählt",
+    "applet_mode_not_supported": "Diese Funktion ist im Applet-Modus nicht verfügbar. Bitte starte den switchbros-Updater über Title-Override, um darauf zuzugreifen.",
     "nothing_to_see": "Hier gibt es nichts zu sehen!"
   },
   "changelog": {
@@ -125,8 +127,8 @@
     "switchbros": "Aktuelle SwitchBros Version: ",
     "cfw": "SwitchBros",
     "ams": "SwitchBros",
-    "ams_text": "\u25c6 Lade SwitchBros Paket(e) herunter und aktualisiere es auf die neueste Version. SwitchBros ist die neueste Version von Atmosphère und Programmen, die getestet und konfiguriert wurden, um damit zu arbeiten.\n\ue016 Nach dem Herunterladen und Entpacken der neuesten Version von SwitchBros, wird die Konsole in eine spezielle payload neu gestartet, die das SwitchBros Update durchführen wird.\n\nBitte nicht das SwitchBros Update und die payload unterbrechen, um Probleme zu vermeiden!",
-    "switchbros_text": "\u25c6 Lade SwitchBros Paket(e) herunter und aktualisiere es auf die neueste Version. SwitchBros ist die neueste Version von Atmosphère und Programmen, die getestet und konfiguriert wurden, um damit zu arbeiten.\n\ue016 Nach dem Herunterladen und Entpacken der neuesten Version von SwitchBros, wird die Konsole in eine spezielle payload neu gestartet, die das SwitchBros Update durchführen wird.\n\nBitte nicht das SwitchBros Update und die payload unterbrechen, um Probleme zu vermeiden!",
+    "ams_text": "\u25c6 Lade SwitchBros Paket(e) herunter und aktualisiere es auf die neueste Version. SwitchBros ist die neueste Version von Atmosphère und Programmen, die getestet und konfiguriert wurden, um damit zu arbeiten.\n\u25c6 Nach dem Herunterladen und Entpacken der neuesten Version von SwitchBros, wird die Konsole in eine spezielle payload neu gestartet, die das SwitchBros Update durchführen wird.\n\nBitte nicht das SwitchBros Update und die payload unterbrechen, um Probleme zu vermeiden!",
+    "switchbros_text": "\u25c6 Lade SwitchBros Paket(e) herunter und aktualisiere es auf die neueste Version. SwitchBros ist die neueste Version von Atmosphère und Programmen, die getestet und konfiguriert wurden, um damit zu arbeiten.\n\u25c6 Nach dem Herunterladen und Entpacken der neuesten Version von SwitchBros, wird die Konsole in eine spezielle payload neu gestartet, die das SwitchBros Update durchführen wird.\n\nBitte nicht das SwitchBros Update und die payload unterbrechen, um Probleme zu vermeiden!",
     "cfw_text": "\u25c6 SwitchBros auf die neueste Version aktualisieren",
     "bootloaders_text": "\u25c6 Download and update bootloaders.",
     "cheats": "Cheats",
@@ -150,6 +152,7 @@
   "hide": {
     "title": "Tabs verstecken",
     "desc": "Verstecke Tabs aus dem Hauptmenü",
+    "update_ams_deepsea": "Atmosphere und DeepSea Downloads"
   },
   "tools": {
     "cheats": "Cheats-Menü",
@@ -167,7 +170,8 @@
     "batch_copy": "Mehrere Dateien kopieren",
     "batch_copy_not_found": "Die folgenden Dateien wurden nicht gefunden und konnten nicht kopiert werden:\n",
     "batch_copy_config_not_found": "Dieses Tool erlaubt dir, Dateien zu anderen Orten zu kopieren, was vielleicht für bootloader/trinket gebraucht wird. Lade copy_files.txt von 'https://git.io/aiosu_copyfiles' herunter und entpacke es in deinen config Ordner. Wird auch nach Updates ausgeführt.",
-    "language": "Sprache der Anwendung ändern"
+    "getting_payload": "Payload herunterladen",
+    "language": "Sprache der Anwendung ändern",
     "outdated_titles": "Aktualisierungen verfügbar",
     "latest_version_not_found": "Infos zur Aktualisierung konnten nicht gefunden werden",
     "outdated_titles_desc": "Es gibt Aktualisierungen für folgende Spiele:"
@@ -187,12 +191,21 @@
     "install_hekate": "Möchtest du auch Hekate herunterladen?\nFalls nein, wird die Switch nun zu einem Speziellem Payload rebooten, um den Installationsprozess abzuschließen.",
     "delete_contents": "Möchtest du den bestehenden '/atmosphere/contents/' Ordner löschen? Dies wird Crashes vorbeugen, falls ein Sysmodul die neueste Atmosphère Version nicht unterstützt. Bedenke, dass dies all deine Sysmodules, Mods und Cheats löscht!",
     "delete_sysmodules_flags": "Möchtest du den Autostart von allen Sysmodules verhindern? Dies wird Crashes vorbeugen, falls ein Sysmodul die neueste Atmosphère Version nicht unterstützt.",
-    "current_switchbros": "Aktuelle Version: \n\ue016 SwitchBros: ",
+    "current_switchbros": "Aktuelle Version: \n\u25c6 SwitchBros: ",
     "getting_ams": "SwitchBros herunterladen",
     "current_ams": "\u25c6 Aktuelle Version von Atmosphère:",
     "erista_rev": "\u25c6 Revision: Erista",
-    "mariko_rev": "\u25c6 Revision: Mariko"
-    "custom_packs_label": "\u25c6 Hier sind die in der {}-Datei aufgelisteten Pakete. Bitte beachte, dass diese nicht von AIO-Switch-Updater überprüft werden, also stelle sicher, dass diese Quelle vertrauenswürdig ist."
+    "mariko_rev": "\u25c6 Revision: Mariko",
+    "deepsea_builder": "DeepSea Builder",
+    "show_module_description": "Beschreibung des Moduls anzeigen",
+    "depends_on": "Die folgenden Module werden ebenfalls installiert",
+    "download_custom_deepsea": "Dieses benutzerdefinierte DeepSea-Paket herunterladen",
+    "get_custom_deepsea": "Benutzerdefiniertes DeepSea-Paket erhalten",
+    "deepsea_label": "\u25c6 DeepSea von Team Neptune ist ein CFW-Paket, das Atmosphère, Hekate und verschiedene Homebrew-Anwendungen enthält.",
+    "download_deepsea_package": "Kompilieren und herunterladen",
+    "cant_fetch_deepsea": "Es konnten keine Pakete geholt werden. Öffne ein GitHub-Issue, wenn dieses Problem weiterhin besteht.",
+    "build_your_deepsea": "Baue dein eigenes DeepSea-Paket durch Auswählen von Paketen",
+    "custom_packs_label": "\u25c6 Hier sind die in der {}-Datei aufgelisteten Pakete. Bitte beachte, dass diese nicht von AIO-Switch-Updater überprüft werden, also stelle sicher, dass diese Quelle vertrauenswürdig ist.",
     "custom_packs_ams": "\u25c6 Downloads containing the Atmosphère custom firmware.",
     "custom_packs_misc": "\u25c6 Downloads containing homebrew and tools.",
     "custom_download" : "Custom download",
