@@ -28,15 +28,19 @@ Kopiere die `switchbros-updater.nro`in den Ordner `/switch/switchbros-updater` a
 - Starte den Internet Browser der Switch.
 
 ## Screenshots
-![2021052023004100](https://user-images.githubusercontent.com/18294541/119041468-5754cf00-b9bf-11eb-9b98-9583f11445ed.jpg)
-![2021052023004600](https://user-images.githubusercontent.com/18294541/119041470-57ed6580-b9bf-11eb-80ce-05649d640432.jpg)
-![2021052023004800](https://user-images.githubusercontent.com/18294541/119041471-5885fc00-b9bf-11eb-8c9a-0944bc54afb3.jpg)
-![2021052023005100](https://user-images.githubusercontent.com/18294541/119041472-5885fc00-b9bf-11eb-93bb-9105c7441132.jpg)
-![2021052023005400](https://user-images.githubusercontent.com/18294541/119041473-591e9280-b9bf-11eb-82bc-bbf3364ca9a0.jpg)
-![2021052023005500](https://user-images.githubusercontent.com/18294541/119041474-591e9280-b9bf-11eb-8c0e-f668505cd6ce.jpg)
-![2021052023010100](https://user-images.githubusercontent.com/18294541/119041476-591e9280-b9bf-11eb-85e3-451d940bbd0c.jpg)
+<details><summary>Ausklappen um die Screenshots zu sehen</summary>
+  
+![1](https://user-images.githubusercontent.com/13203024/201618733-00a426a9-d9e6-4800-81cb-b134112241f6.jpg)
+![2](https://user-images.githubusercontent.com/13203024/201618756-a42f6ae4-6f5e-438c-9421-7102212000bc.jpg)
+![3](https://user-images.githubusercontent.com/13203024/201618769-8c1938e5-4773-4d92-926d-9c2b6681571d.jpg)
+![4](https://user-images.githubusercontent.com/13203024/201618779-958a4b1d-3895-45ab-8d74-588dd3bec223.jpg)
+
+</details>
 
 ## Kompilieren
+
+<details><summary>Ausklappen um Instruktionen anzuzeigen</summary>
+
 Du musst devkitPro und devkitARM installiert haben um dieses Projekt zu kompilieren.
 
 Installiere die benötigten Zusatzmodule:
@@ -56,17 +60,19 @@ Use portlibs and build with libnx provided in this repository
 
 Repository klonen
 ```bash
-$ git clone --recursive https://github.com/HamletDuFromage/aio-switch-updater
-$ cd aio-switch-updater
+$ git clone --recursive https://github.com/Switch-Bros/switchbros-updater.git
+$ cd switchbros-updater
 ```
 
 Kompilieren 
 ```bash
-$ cd aiosu-forwarder
+$ cd sbu-forwarder
 $ make
 $ cd ..
 $ make
 ```
+
+</details>
 
 ## Haftungsausschluss
 Ich besitze, hoste oder vertreibe keine der Dateien, die mit diesem Homebrew-Tool heruntergeladen werden können. Auf Anfrage des Eigentümers werde ich die Möglichkeit, problematische Dateien herunterzuladen, sofort entfernen.
