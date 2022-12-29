@@ -30,10 +30,12 @@ Kopiere die `switchbros-updater.nro`in den Ordner `/switch/switchbros-updater` a
 ## Screenshots
 <details><summary>Ausklappen um die Screenshots zu sehen</summary>
   
-![1](https://user-images.githubusercontent.com/13203024/201618733-00a426a9-d9e6-4800-81cb-b134112241f6.jpg)
-![2](https://user-images.githubusercontent.com/13203024/201618756-a42f6ae4-6f5e-438c-9421-7102212000bc.jpg)
-![3](https://user-images.githubusercontent.com/13203024/201618769-8c1938e5-4773-4d92-926d-9c2b6681571d.jpg)
-![4](https://user-images.githubusercontent.com/13203024/201618779-958a4b1d-3895-45ab-8d74-588dd3bec223.jpg)
+![1](https://user-images.githubusercontent.com/13203024/209908913-be40876e-dbfd-4719-9341-880128932374.jpg)
+![2](https://user-images.githubusercontent.com/13203024/209908959-937e87c9-7f2f-40ad-b7c6-78e4ef7b9afc.jpg)
+![3](https://user-images.githubusercontent.com/13203024/209908962-de5b431f-6cc8-46da-a35a-d1b1c4f52b35.jpg)
+![4](https://user-images.githubusercontent.com/13203024/209908967-599ef915-6f67-4895-a418-d4240ae1a3e7.jpg)
+![5](https://user-images.githubusercontent.com/13203024/209908975-091ef5b5-43f3-403d-afc4-5ad0090b2e00.jpg)
+![6](https://user-images.githubusercontent.com/13203024/209908978-41e2c7ad-53ba-4449-8d40-c8e143d8d23f.jpg)
 
 </details>
 
