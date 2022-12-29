@@ -94,17 +94,17 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
                 WebCommonReply out;
                 Result rc = webPageCreate(&conf, url.c_str());
                 if (R_FAILED(rc))
-                    error += "\uE016 Не могу запустить браузер.\n\uE016 Код ошибки: " + rc;
+                    error += "\uE016 Browser konnte nicht gestartet werden.\n\uE016 Fehlercode: " + rc;
                 webConfigSetJsExtension(&conf, true);
                 webConfigSetPageCache(&conf, true);
                 webConfigSetBootLoadingIcon(&conf, true);
                 webConfigSetWhitelist(&conf, ".*");
                 rc = webConfigShow(&conf, &out);
                 if (R_FAILED(rc))
-                     error += "\uE016 Не могу запустить браузер.\n\uE016 Код ошибки: " + rc;
+                     error += "\uE016 Browser konnte nicht gestartet werden.\n\uE016 Fehlercode: " + rc;
             }
             else {  // Running under applet
-                error += "Эта функция не доступна в режиме апплета (через альбомы).\nПожалуйста перезапустите программу в режиме тайтла (через форвардер или игру), чтобы воспользоваться ей.";
+                error += "Diese Funktion ist im Applet-Modus (Album) nicht verfuegbar..\nBitte starte das Programm ueber Titel-Override neu (ueber Forwarder oder Spiel), um es zu nutzen.";
             }
             if (!error.empty()) {
                 util::showDialogBoxInfo(error);
@@ -147,24 +147,9 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     language->getClickEvent()->subscribe([](brls::View* view) {
         std::vector<std::pair<std::string, std::string>> languages{
             std::make_pair("American English ({})", "en-US"),
-            std::make_pair("日本語 ({})", "ja"),
-            std::make_pair("Français ({})", "fr"),
             std::make_pair("Deutsch ({})", "de"),
-            std::make_pair("Italiano ({})", "it"),
-            std::make_pair("Español ({})", "es"),
-            std::make_pair("Português ({})", "pt"),
-            std::make_pair("Nederlands ({})", "nl"),
             std::make_pair("Русский ({})", "ru"),
-            std::make_pair("한국어 ({})", "ko"),
-            std::make_pair("Polski ({})", "pl"),
-            std::make_pair("简体中文 ({})", "zh-CN"),
-            std::make_pair("繁體中文 ({})", "zh-TW"),
             std::make_pair("English (Great Britain) ({})", "en-GB"),
-            std::make_pair("Français (Canada) ({})", "fr-CA"),
-            std::make_pair("Español (Latinoamérica) ({})", "es-419"),
-            std::make_pair("Português brasileiro ({})", "pt-BR"),
-            std::make_pair("Traditional Chinese ({})", "zh-Hant"),
-            std::make_pair("Simplified Chinese ({})", "zh-Hans")};
         brls::AppletFrame* appView = new brls::AppletFrame(true, true);
         brls::List* list = new brls::List();
         brls::ListItem* listItem;
