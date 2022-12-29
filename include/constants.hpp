@@ -71,9 +71,9 @@ constexpr const char TITLES_PATH[] = "titles/";
 constexpr const char SWITCHBROS_DIRECTORY_PATH[] = "/SwitchBros_BasisPaket/";
 
 constexpr const char COLOR_PICKER_URL[] = "https://git.io/jcpicker";
-constexpr const char JC_COLOR_URL[] = "https://raw.githubusercontent.com/HamletDuFromage/aio-switch-updater/master/jc_profiles.json";
+constexpr const char JC_COLOR_URL[] = "https://raw.githubusercontent.com/Switch-Bros/switchbros-updater/master/jc_profiles.json";
 constexpr const char JC_COLOR_PATH[] = "/config/switchbros-updater/jc_profiles.json";
-constexpr const char PC_COLOR_URL[] = "https://raw.githubusercontent.com/HamletDuFromage/aio-switch-updater/master/pc_profiles.json";
+constexpr const char PC_COLOR_URL[] = "https://raw.githubusercontent.com/Switch-Bros/switchbros-updater/master/pc_profiles.json";
 constexpr const char PC_COLOR_PATH[] = "/config/switchbros-updater/pc_profiles.json";
 
 constexpr const char PAYLOAD_PATH[] = "/payloads/";
