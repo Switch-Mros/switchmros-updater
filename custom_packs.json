@@ -1,9 +1,10 @@
 {
     "ams": {
-        "Name of Atmosphère pack": "link_to_zip",
-        "Name of another pack": "link_to_zip"
+        "Switch Bros. Basis Paket": "https://github.com/Switch-Bros/SwitchBros_BasisPaket/releases/download/111/SwitchBros_BasisPaket.zip",
+        "Switch Bros. Daten Paket": "https://github.com/Switch-Bros/SwitchBros_BasisPaket/releases/download/110/SwitchBros_DatenPaket.zip"
     },
     "misc": {
-        "name of download": "link"
+        "Switch Bros. ThemeApps Paket": "https://github.com/Switch-Bros/SwitchBros_BasisPaket/releases/download/110/SwitchBros_ThemeAppsPaket.zip"
+        "Switch Bros. LAN-Play Paket": "https://github.com/Switch-Bros/SwitchBros_BasisPaket/releases/download/110/SwitchBros_LAN-PlayPaket.zip"
     }
 }
