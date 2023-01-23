@@ -187,7 +187,7 @@
     "set_hekate_reboot_payload": "Soll der Hekate-Payload `{}` nach `{}` kopiert werden?"
   },
   "ams_update": {
-    "reboot_rcm": "Die Switch wird nun zu einem speziellem Payload rebooten, um den Installationsprozess abzuschließen.",
+    "reboot_rcm": "Die Switch führt einen Neustart in den TegraExplorer aus, um den Installationsprozess abzuschließen.\nSolltest du in hekate landen dann starte TegraExplorer manuell und führe das Update.te Skript aus!",
     "install_hekate": "Möchtest du auch Hekate herunterladen?\nFalls nein, wird die Switch nun zu einem Speziellem Payload rebooten, um den Installationsprozess abzuschließen.",
     "delete_contents": "Möchtest du den bestehenden '/atmosphere/contents/' Ordner löschen? Dies wird Crashes vorbeugen, falls ein Sysmodul die neueste Atmosphère Version nicht unterstützt. Bedenke, dass dies all deine Sysmodules, Mods und Cheats löscht!",
     "delete_sysmodules_flags": "Möchtest du den Autostart von allen Sysmodules verhindern? Dies wird Crashes vorbeugen, falls ein Sysmodul die neueste Atmosphère Version nicht unterstützt.",
