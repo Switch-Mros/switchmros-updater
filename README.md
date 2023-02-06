@@ -1,4 +1,5 @@
 # SwitchBros-Updater
+<img alt="GitHub" src="https://img.shields.io/github/license/Switch-Bros/switchbros-updater?label=Lizenz&style=plastic"> [![Github Release](https://img.shields.io/github/v/release/Switch-Bros/switchbros-updater?label=Aktuelle%20Version&style=plastic)](https://github.com/Switch-Bros/switchbros-updater) [![Downloads latest](https://img.shields.io/github/downloads/Switch-Bros/switchbros-updater/2.21.3-SB/total?label=Downloads%20von%202.21.3-SB&style=plastic)](https://github.com/Switch-Bros/switchbros-updater/releases/tag/2.21.3-SB) [![Chat on Discord](https://img.shields.io/discord/322458533880659969?label=SB%20Discord&style=plastic)](https://discord.com/invite/switchbros)
 
 <p align="center">
 <img src = "https://i.imgur.com/R2NRQ1g.jpg"\><br>
