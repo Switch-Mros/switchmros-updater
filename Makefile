@@ -169,7 +169,7 @@ $(BUILD): $(ROMFS)
 	@[ -d $@ ] || mkdir -p $@
 	@MSYS2_ARG_CONV_EXCL="-D;$(MSYS2_ARG_CONV_EXCL)" $(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
 	@cp $(OUTPUT).nro $(CURDIR)/output/switchbros-updater.nro
-#	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
+ 	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
 
 #---------------------------------------------------------------------------------
 clean:
@@ -185,11 +185,8 @@ nxlink:
 	nxlink -a 192.168.178.223 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
 
 copy:
-	@cp $(CURDIR)/output/switchbros-updater.nro
-#	$(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
-	
-	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin
-#	$(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.bin
+	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
+	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.bin
 
 #---------------------------------------------------------------------------------
 else
