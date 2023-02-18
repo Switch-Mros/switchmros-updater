@@ -52,6 +52,7 @@
     "cheats_not_found": "Ich kann keine Cheats finden, die mit der aktuellen Build-ID des Spiels übereinstimmen. Vielleicht wird die aktuelle Version des Spiels noch nicht unterstützt",
     "old_cheats_found": "Zu diesem/r BID passende Cheats gefunden - [ {}].",
     "cheatslips_logout": "Ausloggen"
+
   },
   "common": {
     "downloading": "Wird heruntergeladen…",
@@ -112,7 +113,7 @@
   },
   "main": {
     "getting": "Herunterladen: {}",
-    "firmware_text": "\u25c6 Firmware von: 'https://darthsternie.net/switch-firmwares/'. Sobald hehruntergeladen, wird sie in '/firmware' entpackt. Danach kannst du das Update mit Daybreak installieren.\n\u25c6 Aktuelle Firmware: ",
+    "firmware_text": "\u25c6 Firmware von: 'https://darthsternie.net/switch-firmwares/'. Firmware wird heruntergeladen und in '/firmware' entpackt. Danach kannst du das Update mit Daybreak installieren.\n\u25c6 Aktuelle Firmware: ",
     "firmware_version": "\u25c6  Aktuelle Firmware-Version: ",
     "cheats_text": "\u25c6 Lade ein täglich geupdatetes Archiv von 'gbatemp.net' runter. Cheats von Spielen, die du nicht besitzt, werden nicht entpackt. Du kannst Updates für ausgewählte Spiele unter 'Tools→Cheat Menü' deaktivieren.\n\u25c6 Momentane Cheatversion: ",
     "get_cheats": "Lade GBAtemp.net Cheatarchiv herunter (ver {})",
@@ -125,34 +126,25 @@
     "latest_cheats": "Neueste Version",
     "app": "App",
     "switchbros": "Aktuelle SwitchBros Version: ",
-    "cfw": "SwitchBros",
     "ams": "SwitchBros",
-    "ams_text": "\u25c6 Lade das SwitchBros_BasisPaket herunter und aktualisiere es auf die neueste Version. SwitchBros ist die neueste Version von Atmosphère und Programmen, die getestet und konfiguriert wurden, um damit zu arbeiten.\n\u25c6 Nach dem Herunterladen und entpacken der neuesten Version vom SwitchBros Paket, wird die Konsole in den TegraExplorer neu gestartet, die das SwitchBros Update durchführen wird.\nSollte sie in hekate starten, dann starte den TegraExplorer manuell und wähle das 'Update.te' Skript aus.\n\nBitte nicht das SwitchBros Update und die payload unterbrechen, um Probleme zu vermeiden!",
-    "switchbros_text": "\u25c6 Lade das SwitchBros_BasisPaket herunter und aktualisiere es auf die neueste Version. SwitchBros ist die neueste Version von Atmosphère und Programmen, die getestet und konfiguriert wurden, um damit zu arbeiten.\n\u25c6 Nach dem Herunterladen und entpacken der neuesten Version vom SwitchBros Paket, wird die Konsole in den TegraExplorer neu gestartet, die das SwitchBros Update durchführen wird.\nSollte sie in hekate starten, dann starte den TegraExplorer manuell und wähle das 'Update.te' Skript aus.\n\nBitte nicht das SwitchBros Update und die payload unterbrechen, um Probleme zu vermeiden!",
+    "switchbros_text": "\u25c6 Lade das SwitchBros. Paket herunter und aktualisiere es auf die neueste Version.\n\u25c6 Nach dem herunterladen und entpacken wird die Konsole in die SwitchBros. Payload neu gestartet um das Update-Skript auszuführen.\nWenn nicht, dann starte den TegraExplorer bitte manuell und wähle das 'update.te' Skript aus.\n\nBitte nicht das SwitchBros Update und die payload unterbrechen, um Probleme zu vermeiden!",
     "cfw_text": "\u25c6 SwitchBros auf die neueste Version aktualisieren",
-    "bootloaders_text": "\u25c6 Download und Update des bootloaders.",
     "cheats": "Cheats",
     "links_not_found": "Konnte keinen Downloadlink finden. Stelle sicher, dass deine Switch Internetzugriff hat.\nWenn das Problem bestehen bleibt, öffne bitte eine 'Issue' auf Github.",
     "new_update": " - Neues App-Update verfügbar",
     "about": "Über die App",
     "update_ams": "SwitchBros Paket Update",
-    "custom_downloads": "Eigene Downloads",
     "update_cfw": "SwitchBros Paket Update",
-    "update_bootloaders": "Bootloader Update",
     "update_sigpatches": "SigPatches Update",
     "download_firmware": "Firmwares herunterladen",
     "download_cheats": "Cheats herunterladen",
     "tools": "Werkzeuge",
     "launch_warning": "Bitte beachte die folgenden Punkte, bevor du die App verwendest:\n\n\u25c6 Lese zuerst, wie du deine Switch manuell aktualisierst. Auf diese Weise kannst du die App besser verstehen und wissen, was zu tun ist, wenn etwas schief geht. \n\u25c6 Bitte beachte, dass von der Verwendung dieser App auf einer exFAT-SD-Karte DRINGEND abgeraten wird, da diese höchstwahrscheinlich im Laufe der Zeit deine Daten beschädigen wird.\n\n\u25c6 Möglicherweise wurden einige Änderungen bezüglich der aktuellen Funktionen eingeführt. Sieh sie dir über das Menü Tools→Changelog an.\n\nDieser Bildschirm wird nicht mehr angezeigt.",
     "footer_text": "v{} | {:.1f}GB verfügbar",
-    "theme_warning": "Es scheint, dass du ein benutzerdefiniertes Theme installiert hast, das dazu führen kann, dass dein System nach dem Upgrade der Firmware nicht mehr startet. Bitte lösch es vor dem Upgrade.",
-    "payloads_label": "\u25c6 Herunterladen von RCM-Payloads auf {}",
-    "hekate_ipl_label": "\u25c6 Lade eine abgespeckte \"Funktioniert gerade so\" hekate_ipl.ini Konfigurationsdatei herunter. Diese überschreibt deine aktuelle hekate_ipl.ini."
   },
   "hide": {
     "title": "Tabs verstecken",
     "desc": "Verstecke Tabs aus dem Hauptmenü",
-    "update_ams_deepsea": "Atmosphere und DeepSea Downloads"
   },
   "tools": {
     "cheats": "Cheats-Menü",
@@ -170,7 +162,6 @@
     "batch_copy": "Mehrere Dateien kopieren",
     "batch_copy_not_found": "Die folgenden Dateien wurden nicht gefunden und konnten nicht kopiert werden:\n",
     "batch_copy_config_not_found": "Dieses Tool erlaubt dir, Dateien zu anderen Orten zu kopieren, was vielleicht für bootloader/trinket gebraucht wird. Lade copy_files.txt von 'https://git.io/aiosu_copyfiles' herunter und entpacke es in deinen config Ordner. Wird auch nach Updates ausgeführt.",
-    "getting_payload": "Payload herunterladen",
     "language": "Sprache der Anwendung ändern",
     "outdated_titles": "Aktualisierungen verfügbar",
     "latest_version_not_found": "Infos zur Aktualisierung konnten nicht gefunden werden",
@@ -179,12 +170,10 @@
   "utils": {
     "fw_warning": "Wegen der Größe der Firmwarearchive werden Downloads im Applet Mode nicht unterstützt. Bitte öffne die App mit vollem RAM Zugriff (Title Override).",
     "overwrite": " Möchtest du die folgende Datei überschreiben: ",
-    "overwrite_inis": "Möchtest du die vorhandene .ini Konfigurationsdateien überschreiben?",
     "wrong_type_sigpatches": "Bei der heruntergeladenen Datei handelt es sich nicht um ein SigPatches-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, öffne bitte eine 'Issue' auf Github.",
     "wrong_type_fw": "Bei der heruntergeladenen Datei handelt es sich nicht um ein Firmware-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, öffne bitte eine 'Issue' auf Github.",
+    "overwrite_inis": "Möchtest du die vorhandene .ini Konfigurationsdateien überschreiben?",
     "wrong_type_cfw": "Bei der heruntergeladenen Datei handelt es sich nicht um ein CFW-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, öffne bitte eine 'Issue' auf Github.",
-    "not_an_archive": "Bei der heruntergeladenen Datei handelt es sich nicht um ein Zip-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht,  öffne bitte eine 'Issue' auf Github.",
-    "set_hekate_reboot_payload": "Soll der Hekate-Payload `{}` nach `{}` kopiert werden?"
   },
   "ams_update": {
     "reboot_rcm": "Die Switch führt einen Neustart in den TegraExplorer aus, um den Installationsprozess abzuschließen.\nSolltest du in hekate landen dann starte TegraExplorer manuell und führe das 'Update.te' Skript aus!",
@@ -196,21 +185,6 @@
     "current_ams": "\u25c6 Aktuelle Version von Atmosphère:",
     "erista_rev": "\u25c6 Revision: Erista",
     "mariko_rev": "\u25c6 Revision: Mariko",
-    "deepsea_builder": "DeepSea Builder",
-    "show_module_description": "Beschreibung des Moduls anzeigen",
-    "depends_on": "Die folgenden Module werden ebenfalls installiert",
-    "download_custom_deepsea": "Dieses benutzerdefinierte DeepSea-Paket herunterladen",
-    "get_custom_deepsea": "Benutzerdefiniertes DeepSea-Paket erhalten",
-    "deepsea_label": "\u25c6 DeepSea von Team Neptune ist ein CFW-Paket, das Atmosphère, Hekate und verschiedene Homebrew-Anwendungen enthält.",
-    "download_deepsea_package": "Kompilieren und herunterladen",
-    "cant_fetch_deepsea": "Es konnten keine Pakete geholt werden. Öffne bitte eine 'Issue' auf Github, wenn dieses Problem weiterhin besteht.",
-    "build_your_deepsea": "Baue dein eigenes DeepSea-Paket durch Auswählen von Paketen",
-    "custom_packs_label": "\u25c6 Hier sind die in der {}-Datei aufgelisteten Pakete. Bitte beachte, dass diese nicht von AIO-Switch-Updater überprüft werden, also stelle sicher, dass diese Quelle vertrauenswürdig ist.",
-    "custom_packs_ams": "\u25c6 Downloads die Atmosphèreeigene Firmware enthalten.",
-    "custom_packs_misc": "\u25c6 Downloads die Homebrew und Werkzeuge enthalten.",
-    "custom_download" : "Eigener Download",
-    "add_custom_link": "Füge einen eigenen Link hinzu",
-    "delete_custom_link": "Löschen"
   },
   "firmware": {
     "launch_daybreak": "Soll Daybreak gestartet werden, um das heruntergeladene Firmware-Upgrade zu installieren?"
