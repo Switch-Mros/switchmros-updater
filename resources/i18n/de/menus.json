@@ -71,8 +71,6 @@
     "go_back": "Zurück",
     "confirm": "Bestätigen",
     "cancel": "Abbrechen",
-    "off": "Ausschalten",
-    "selected": "Ausgewählt",
     "applet_mode_not_supported": "Diese Funktion ist im Applet-Modus nicht verfügbar. Bitte starte den SwitchBros-Updater über Title-Override, um darauf zuzugreifen.",
     "nothing_to_see": "Hier gibt es nichts zu sehen!"
   },
@@ -140,11 +138,11 @@
     "download_cheats": "Cheats herunterladen",
     "tools": "Werkzeuge",
     "launch_warning": "Bitte beachte die folgenden Punkte, bevor du die App verwendest:\n\n\u25c6 Lese zuerst, wie du deine Switch manuell aktualisierst. Auf diese Weise kannst du die App besser verstehen und wissen, was zu tun ist, wenn etwas schief geht. \n\u25c6 Bitte beachte, dass von der Verwendung dieser App auf einer exFAT-SD-Karte DRINGEND abgeraten wird, da diese höchstwahrscheinlich im Laufe der Zeit deine Daten beschädigen wird.\n\n\u25c6 Möglicherweise wurden einige Änderungen bezüglich der aktuellen Funktionen eingeführt. Sieh sie dir über das Menü Tools→Changelog an.\n\nDieser Bildschirm wird nicht mehr angezeigt.",
-    "footer_text": "v{} | {:.1f}GB verfügbar",
+    "footer_text": "v{} | {:.1f}GB verfügbar"
   },
   "hide": {
     "title": "Tabs verstecken",
-    "desc": "Verstecke Tabs aus dem Hauptmenü",
+    "desc": "Verstecke Tabs aus dem Hauptmenü"
   },
   "tools": {
     "cheats": "Cheats-Menü",
@@ -173,7 +171,7 @@
     "wrong_type_sigpatches": "Bei der heruntergeladenen Datei handelt es sich nicht um ein SigPatches-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, öffne bitte eine 'Issue' auf Github.",
     "wrong_type_fw": "Bei der heruntergeladenen Datei handelt es sich nicht um ein Firmware-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, öffne bitte eine 'Issue' auf Github.",
     "overwrite_inis": "Möchtest du die vorhandene .ini Konfigurationsdateien überschreiben?",
-    "wrong_type_cfw": "Bei der heruntergeladenen Datei handelt es sich nicht um ein CFW-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, öffne bitte eine 'Issue' auf Github.",
+    "wrong_type_cfw": "Bei der heruntergeladenen Datei handelt es sich nicht um ein CFW-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, öffne bitte eine 'Issue' auf Github."
   },
   "ams_update": {
     "reboot_rcm": "Die Switch führt einen Neustart in den TegraExplorer aus, um den Installationsprozess abzuschließen.\nSolltest du in hekate landen dann starte TegraExplorer manuell und führe das 'Update.te' Skript aus!",
@@ -184,7 +182,7 @@
     "getting_ams": "SwitchBros herunterladen",
     "current_ams": "\u25c6 Aktuelle Version von Atmosphère:",
     "erista_rev": "\u25c6 Revision: Erista",
-    "mariko_rev": "\u25c6 Revision: Mariko",
+    "mariko_rev": "\u25c6 Revision: Mariko"
   },
   "firmware": {
     "launch_daybreak": "Soll Daybreak gestartet werden, um das heruntergeladene Firmware-Upgrade zu installieren?"
