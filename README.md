@@ -53,6 +53,7 @@ $ sudo (dkp-)pacman -Sy
 ```bash
 $ sudo (dkp-)pacman -S  switch-glfw \
                         switch-curl \
+                        switch-glad \
                         switch-glm \
                         switch-mbedtls \
                         switch-zlib
@@ -63,16 +64,21 @@ Use portlibs and build with libnx provided in this repository
 
 Repository klonen
 ```bash
-$ git clone --recursive https://github.com/Switch-Bros/switchbros-updater.git
+$ git clone --recursive https://github.com/Switch-Bros/TegraExplorer
+$ git clone --recursive https://github.com/Switch-Bros/switchbros-updater
 $ cd switchbros-updater
 ```
 
 Kompilieren 
 ```bash
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/devkitPPC
+
 $ cd sbu-forwarder
-$ make
+$ make -j
 $ cd ..
-$ make
+$ make -j
 ```
 
 </details>
