@@ -71,9 +71,9 @@ $ cd switchbros-updater
 
 Kompilieren 
 ```bash
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitpro/devkitARM
-export DEVKITPPC=/opt/devkitpro/devkitPPC
+$ export DEVKITPRO=/opt/devkitpro
+$ export DEVKITARM=/opt/devkitpro/devkitARM
+$ export DEVKITPPC=/opt/devkitpro/devkitPPC
 
 $ cd sbu-forwarder
 $ make -j
