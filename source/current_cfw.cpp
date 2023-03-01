@@ -64,7 +64,7 @@ namespace CurrentCfw {
         std::string switchbros_version = fs::readLine("/switch/switchbros-updater/version");
 
         if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &version))) {
-            res += switchbros_version + ";\n\ue016 Atmosphere: " + 
+            res += switchbros_version + ";\n\ue016 SwitchBros-O-Sphere: " + 
                     std::to_string((version >> 56) & ((1 << 8) - 1)) + "." +
                     std::to_string((version >> 48) & ((1 << 8) - 1)) + "." +
                     std::to_string((version >> 40) & ((1 << 8) - 1));
@@ -74,7 +74,7 @@ namespace CurrentCfw {
             return res;
         }
         else
-            return "AMS-Version konnte nicht abgerufen werden";
+            return "SBOS-Version konnte nicht abgerufen werden";
     }
 
 }  // namespace CurrentCfw
