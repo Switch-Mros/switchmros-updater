@@ -126,7 +126,7 @@ namespace fs {
         std::ifstream in(path);
         if(in){
             std::getline(in, str);
-        } else {str = "kein SwitchBros";}
+        } else {str = "Kein SwitchBros";}
         return str;
     }
 
