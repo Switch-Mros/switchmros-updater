@@ -22,24 +22,28 @@ static Service g_amsBpcSrv;
 
 NX_GENERATE_SERVICE_GUARD(amsBpc);
 
-Result _amsBpcInitialize(void) {
+Result _amsBpcInitialize(void)
+{
     Handle h;
     Result rc = svcConnectToNamedPort(&h, "bpc:ams"); /* TODO: ams:bpc */
     if (R_SUCCEEDED(rc)) serviceCreate(&g_amsBpcSrv, h);
     return rc;
 }
 
-void _amsBpcCleanup(void) {
+void _amsBpcCleanup(void)
+{
     serviceClose(&g_amsBpcSrv);
 }
 
-Service *amsBpcGetServiceSession(void) {
+Service* amsBpcGetServiceSession(void)
+{
     return &g_amsBpcSrv;
 }
 
-Result amsBpcSetRebootPayload(const void *src, size_t src_size) {
+Result amsBpcSetRebootPayload(const void* src, size_t src_size)
+{
     return serviceDispatch(&g_amsBpcSrv, 65001,
-        .buffer_attrs = { SfBufferAttr_In | SfBufferAttr_HipcMapAlias },
+        .buffer_attrs = {SfBufferAttr_In | SfBufferAttr_HipcMapAlias },
         .buffers = { { src, src_size } },
     );
 }
