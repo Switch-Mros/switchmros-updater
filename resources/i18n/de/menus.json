@@ -164,6 +164,7 @@
     "outdated_titles": "Aktualisierung für folgende Spiele verfügbar",
     "latest_version_not_found": "Infos zur Aktualisierung konnten nicht gefunden werden",
     "outdated_titles_desc": "Es gibt Aktualisierungen für folgende Spiele:"
+
   },
   "utils": {
     "fw_warning": "Wegen der Größe der Firmwarearchive werden Downloads im Applet Mode nicht unterstützt. Bitte öffne die App mit vollem RAM Zugriff (Title Override).",
