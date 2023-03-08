@@ -43,7 +43,11 @@ namespace util {
 
     void downloadArchive(const std::string& url, contentType type, long& status_code)
     {
-        fs::createTree(DOWNLOAD_PATH);
+        if (std::filesystem::exists("/bootloader/hekate_ipl.ini")) {
+                    fs::copyFile("/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl_.ini");
+                    fs::copyFile("/bootloader/nyx.ini", "/bootloader/nyx_.ini");
+            }
+		fs::createTree(DOWNLOAD_PATH);
         switch (type) {
             case contentType::custom:
                 status_code = download::downloadFile(url, CUSTOM_FILENAME, OFF);
@@ -62,12 +66,7 @@ namespace util {
                 break;
             case contentType::ams_cfw:
                 status_code = download::downloadFile(url, AMS_FILENAME, OFF);
-                
-                if (std::filesystem::exists("/bootloader/hekate_ipl.ini")) {
-                    fs::copyFile("/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl_.ini");
-                    fs::copyFile("/bootloader/nyx.ini", "/bootloader/nyx_.ini");
-                }
-                break;
+				break;
             default:
                 break;
         }
