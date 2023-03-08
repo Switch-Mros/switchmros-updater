@@ -62,6 +62,11 @@ namespace util {
                 break;
             case contentType::ams_cfw:
                 status_code = download::downloadFile(url, AMS_FILENAME, OFF);
+                
+                if (std::filesystem::exists("/bootloader/hekate_ipl.ini")) {
+                    fs::copyFile("/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl_.ini");
+                    fs::copyFile("/bootloader/nyx.ini", "/bootloader/nyx_.ini");
+                }
                 break;
             default:
                 break;
@@ -189,8 +194,6 @@ namespace util {
                 extract::extract(CFW_FILENAME, SWITCHBROS_DIRECTORY_PATH, 1);
 
                 if (std::filesystem::exists("/SwitchBros_BasisPaket/bootloader/hekate_ipl.ini")) {
-                    fs::copyFile("/bootloader/hekate_ipl.ini", "/SwitchBros_BasisPaket/switchbros/hekate_ipl.ini");
-                    fs::copyFile("/bootloader/nyx.ini", "/SwitchBros_BasisPaket/switchbros/nyx.ini");
                     fs::copyFile("/SwitchBros_BasisPaket/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl.ini");
                     fs::copyFile("/SwitchBros_BasisPaket/config/switchbros-updater/switchbros_updater.ini", "/bootloader/ini/!switchbros_updater.ini");
                     fs::copyFile("/SwitchBros_BasisPaket/bootloader/res/icon_SB_nobox.bmp", "/bootloader/res/icon_SB_nobox.bmp");
