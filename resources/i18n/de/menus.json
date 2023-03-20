@@ -134,7 +134,7 @@
     "update_ams": "SwitchBros OS Update",
     "update_cfw": "SwitchBros OS Update",
 	"update_bootloaders": "SB Entwicklung",
-    "bootloaders_text": "\u25c6 In Entwicklung befindliche Pakete zum testen.",
+	"bootloaders_text": "\u25c6 In Entwicklung befindliche Pakete zum testen.",
     "hekate_ipl_label": "",
     "payloads_label": "", 
     "update_sigpatches": "SigPatches Update",
