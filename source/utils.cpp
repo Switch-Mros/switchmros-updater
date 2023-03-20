@@ -43,6 +43,10 @@ namespace util {
 
     void downloadArchive(const std::string& url, contentType type, long& status_code)
     {
+	if (std::filesystem::exists("/bootloader/hekate_ipl.ini")) {
+		fs::copyFile("/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl_.ini");
+		fs::copyFile("/bootloader/nyx.ini", "/bootloader/nyx_.ini");
+            }
         fs::createTree(DOWNLOAD_PATH);
         switch (type) {
             case contentType::custom:
@@ -179,8 +183,19 @@ namespace util {
                 break;
             }
             case contentType::bootloaders: {
-                int preserveInis = showDialogBoxBlocking("menus/utils/overwrite_inis"_i18n, "menus/common/yes"_i18n, "menus/common/no"_i18n);
-                extract::extract(BOOTLOADER_FILENAME, ROOT_PATH, preserveInis);
+                 if (std::filesystem::exists(SWITCHBROS_DIRECTORY_PATH)) std::filesystem::remove_all(SWITCHBROS_DIRECTORY_PATH);
+                std::filesystem::create_directory(SWITCHBROS_DIRECTORY_PATH);
+                extract::extract(CFW_FILENAME, SWITCHBROS_DIRECTORY_PATH, 1);
+
+                if (std::filesystem::exists("/SwitchBros_BasisPaket/bootloader/hekate_ipl.ini")) {
+                    fs::copyFile("/bootloader/hekate_ipl.ini", "/SwitchBros_BasisPaket/switchbros/hekate_ipl.ini");
+                    fs::copyFile("/bootloader/nyx.ini", "/SwitchBros_BasisPaket/switchbros/nyx.ini");
+                    fs::copyFile("/SwitchBros_BasisPaket/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl.ini");
+                    fs::copyFile("/SwitchBros_BasisPaket/config/switchbros-updater/switchbros_updater.ini", "/bootloader/ini/!switchbros_updater.ini");
+                    fs::copyFile("/SwitchBros_BasisPaket/bootloader/res/icon_SB_nobox.bmp", "/bootloader/res/icon_SB_nobox.bmp");
+					fs::copyFile("/SwitchBros_BasisPaket/bootloader/payloads/TegraExplorer.bin", "/payload.bin");
+                    if (std::filesystem::exists(CFW_FILENAME)) std::filesystem::remove_all(CFW_FILENAME);
+                }
                 break;
             }
             case contentType::ams_cfw: {
@@ -194,6 +209,7 @@ namespace util {
                     fs::copyFile("/SwitchBros_BasisPaket/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl.ini");
                     fs::copyFile("/SwitchBros_BasisPaket/config/switchbros-updater/switchbros_updater.ini", "/bootloader/ini/!switchbros_updater.ini");
                     fs::copyFile("/SwitchBros_BasisPaket/bootloader/res/icon_SB_nobox.bmp", "/bootloader/res/icon_SB_nobox.bmp");
+					fs::copyFile("/SwitchBros_BasisPaket/bootloader/payloads/TegraExplorer.bin", "/payload.bin");
                     if (std::filesystem::exists(CFW_FILENAME)) std::filesystem::remove_all(CFW_FILENAME);
                 }
                 break;
