@@ -1,8 +1,8 @@
 #pragma once
 constexpr const char ROOT_PATH[]= "/";
 constexpr const char APP_PATH[] = "/switch/switchbros-updater/";
-constexpr const char NRO_PATH[] = "/switch/switchbros-updater/switchbros-updater.nro";
-constexpr const char NRO_PATH_REGEX[] = ".*(/switch/switchbros-updater.*switchbros-updater.nro).*";
+constexpr const char NRO_PATH[] = "/switch/switchbros-updater/switchMros-updater.nro";
+constexpr const char NRO_PATH_REGEX[] = ".*(/switch/switchbros-updater.*switchMros-updater.nro).*";
 constexpr const char DOWNLOAD_PATH[] = "/config/switchbros-updater/";
 constexpr const char CONFIG_PATH[] = "/config/switchbros-updater/";
 constexpr const char CONFIG_PATH_UNZIP[] = "config\\switchbros-updater";
@@ -12,29 +12,29 @@ constexpr const char RCM_PAYLOAD_PATH[] = "/payload.bin";
 constexpr const char MARIKO_PAYLOAD_PATH[] = "/payload.bin";
 constexpr const char MARIKO_PAYLOAD_PATH_TEMP[] = "/payload.bin.aio";
 
-constexpr const char APP_URL[] = "https://github.com/Switch-Bros/switchbros-updater/releases/latest/download/switchbros-updater.zip";
-constexpr const char TAGS_INFO[] = "https://api.github.com/repos/Switch-Bros/switchbros-updater/releases/latest";
+constexpr const char APP_URL[] = "https://github.com/Switch-Mros/switchbros-updater/releases/latest/download/switchbros-updater.zip";
+constexpr const char TAGS_INFO[] = "https://api.github.com/repos/Switch-Mros/switchbros-updater/releases/latest";
 constexpr const char APP_FILENAME[] = "/config/switchbros-updater/app.zip";
 
-constexpr const char NXLINKS_URL[] = "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/nx-links.json";
+constexpr const char NXLINKS_URL[] = "https://github.com/Switch-Mros/nx-links/blob/master/nx-links.json";
 constexpr const char CUSTOM_FILENAME[] = "/config/switchbros-updater/custom.zip";
 constexpr const char HEKATE_IPL_PATH[] = "/bootloader/hekate_ipl.ini";
 
-constexpr const char FIRMWARE_URL[] = "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/firmwares.json";
+constexpr const char FIRMWARE_URL[] = "https://raw.githubusercontent.com/Switch-Mros/nx-links/master/firmwares.json";
 constexpr const char FIRMWARE_FILENAME[] = "/config/switchbros-updater/firmware.zip";
 constexpr const char FIRMWARE_PATH[] = "/firmware/";
 
-constexpr const char CFW_URL[] = "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/bootloaders.json";
+constexpr const char CFW_URL[] = "https://raw.githubusercontent.com/Switch-Mros/nx-links/master/bootloaders.json";
 constexpr const char CFW_FILENAME[] = "/config/switchbros-updater/ams.zip";
 constexpr const char BOOTLOADER_FILENAME[] = "/config/switchbros-updater/ams.zip";
 
-constexpr const char AMS_URL[] = "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/cfws.json";
-constexpr const char SXOS_URL[] = "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/sxos.json";
+constexpr const char AMS_URL[] = "https://raw.githubusercontent.com/Switch-Mros/nx-links/master/cfws.json";
+constexpr const char SXOS_URL[] = "https://raw.githubusercontent.com/Switch-Mros/nx-links/master/sxos.json";
 constexpr const char AMS_FILENAME[] = "/config/switchbros-updater/ams.zip";
 
-constexpr const char HEKATE_URL[] = "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/hekate.json";
+constexpr const char HEKATE_URL[] = "https://raw.githubusercontent.com/Switch-Mros/nx-links/master/hekate.json";
 
-constexpr const char PAYLOAD_URL[] = "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/payloads.json";
+constexpr const char PAYLOAD_URL[] = "https://raw.githubusercontent.com/Switch-Mros/nx-links/master/payloads.json";
 
 constexpr const char DEEPSEA_META_JSON[] = "https://builder.teamneptune.net/meta.json";
 constexpr const char DEEPSEA_BUILD_URL[] = "https://builder.teamneptune.net/build/";
@@ -71,9 +71,9 @@ constexpr const char TITLES_PATH[] = "titles/";
 constexpr const char SWITCHBROS_DIRECTORY_PATH[] = "/SwitchBros_BasisPaket/";
 
 constexpr const char COLOR_PICKER_URL[] = "https://git.io/jcpicker";
-constexpr const char JC_COLOR_URL[] = "https://raw.githubusercontent.com/Switch-Bros/switchbros-updater/master/jc_profiles.json";
+constexpr const char JC_COLOR_URL[] = "https://raw.githubusercontent.com/Switch-Mros/switchbros-updater/master/jc_profiles.json";
 constexpr const char JC_COLOR_PATH[] = "/config/switchbros-updater/jc_profiles.json";
-constexpr const char PC_COLOR_URL[] = "https://raw.githubusercontent.com/Switch-Bros/switchbros-updater/master/pc_profiles.json";
+constexpr const char PC_COLOR_URL[] = "https://raw.githubusercontent.com/Switch-Mros/switchbros-updater/master/pc_profiles.json";
 constexpr const char PC_COLOR_PATH[] = "/config/switchbros-updater/pc_profiles.json";
 
 constexpr const char PAYLOAD_PATH[] = "/payloads/";

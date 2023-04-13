@@ -20,9 +20,9 @@ SOURCES		:=	source
 RESOURCES	:=	resources
 DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
-APP_TITLE	:=	SwitchBros Updater
-APP_AUTHOR	:=	HamletDuFromage, forked by SwitchBros
-APP_VERSION :=  2.21.4-SB
+APP_TITLE	:=	SwitchMros Updater
+APP_AUTHOR	:=	HamletDuFromage, forked by SwitchMros
+APP_VERSION :=  2.21.4-SM
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -168,8 +168,8 @@ $(BUILD): $(ROMFS)
 	[ -d $(CURDIR)/output ] || mkdir -p $(CURDIR)/output
 	@[ -d $@ ] || mkdir -p $@
 	@MSYS2_ARG_CONV_EXCL="-D;$(MSYS2_ARG_CONV_EXCL)" $(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
-	@cp $(OUTPUT).nro $(CURDIR)/output/switchbros-updater.nro
-	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
+	@cp $(OUTPUT).nro $(CURDIR)/output/switchmros-updater.nro
+	@cp $(CURDIR)/output/switchmros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
 
 #---------------------------------------------------------------------------------
 clean:
